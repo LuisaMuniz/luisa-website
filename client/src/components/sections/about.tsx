@@ -5,7 +5,7 @@ export default function About() {
     <section id="about" className="section-padding bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">About Me</h2>
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">About Me</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             A passionate project manager with a unique blend of analytical thinking and creative problem-solving, 
             ready to step into a Chief of Staff role.
@@ -42,9 +42,9 @@ export default function About() {
               alt="Professional woman in modern office" 
               className="rounded-xl shadow-2xl w-full h-auto"
             />
-            <div className="absolute -bottom-6 -right-6 bg-yellow-500 p-6 rounded-xl shadow-lg">
+            <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-orange-400 to-pink-500 p-6 rounded-xl shadow-lg transform hover:scale-110 transition-transform duration-300">
               <div className="text-center">
-                <div className="text-3xl font-bold text-white">8+</div>
+                <div className="text-3xl font-bold text-white animate-bounce-fun">8+</div>
                 <div className="text-white text-sm">Years Experience</div>
               </div>
             </div>

@@ -62,7 +62,7 @@ export default function Contact() {
     <section id="contact" className="section-padding bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">Let's Connect</h2>
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent mb-4">Let's Connect</h2>
           <p className="text-xl text-slate-600">Ready to discuss how I can contribute as your next Chief of Staff</p>
         </div>
 
@@ -165,7 +165,7 @@ export default function Contact() {
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full bg-blue-600 hover:bg-blue-700"
+                  className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white transform hover:scale-105 transition-all duration-300 shadow-lg"
                   disabled={contactMutation.isPending}
                 >
                   {contactMutation.isPending ? "Sending..." : "Send Message"}

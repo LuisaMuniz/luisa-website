@@ -37,7 +37,7 @@ export default function Interests() {
     <section id="interests" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">Personal Interests</h2>
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-500 to-teal-500 bg-clip-text text-transparent mb-4">Personal Interests</h2>
           <p className="text-xl text-slate-600">The passions that fuel my creativity and drive</p>
         </div>
 

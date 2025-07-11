@@ -8,19 +8,19 @@ export default function Experience() {
       icon: ProjectorIcon,
       title: "Project Management",
       description: "Agile, Scrum, PMP-certified with expertise in complex project delivery",
-      color: "from-blue-500 to-blue-600"
+      color: "from-purple-500 to-pink-500"
     },
     {
       icon: Users,
       title: "Team Leadership",
       description: "Cross-functional team management and stakeholder alignment",
-      color: "from-yellow-500 to-yellow-600"
+      color: "from-orange-500 to-red-500"
     },
     {
       icon: TrendingUp,
       title: "Strategic Planning",
       description: "Data-driven decision making and process optimization",
-      color: "from-slate-600 to-slate-700"
+      color: "from-blue-500 to-green-500"
     }
   ];
 
@@ -49,7 +49,7 @@ export default function Experience() {
     <section id="experience" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">Experience & Skills</h2>
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent mb-4">Experience & Skills</h2>
           <p className="text-xl text-slate-600">A comprehensive overview of my professional capabilities</p>
         </div>
 

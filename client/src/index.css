@@ -29,10 +29,15 @@
   --chart-4: hsl(43, 74%, 66%);
   --chart-5: hsl(27, 87%, 67%);
   
-  /* Custom CV website colors */
-  --cv-primary: hsl(221, 83%, 53%);
-  --cv-secondary: hsl(215, 25%, 27%);
-  --cv-accent: hsl(43, 96%, 56%);
+  /* Custom CV website colors - Fun & Vibrant */
+  --cv-primary: hsl(280, 100%, 70%);
+  --cv-secondary: hsl(340, 100%, 65%);
+  --cv-accent: hsl(50, 100%, 60%);
+  --cv-blue: hsl(220, 100%, 65%);
+  --cv-green: hsl(150, 100%, 45%);
+  --cv-orange: hsl(25, 100%, 60%);
+  --cv-purple: hsl(270, 100%, 70%);
+  --cv-pink: hsl(320, 100%, 70%);
   --cv-slate-50: hsl(210, 40%, 98%);
   --cv-slate-600: hsl(215, 16%, 46.9%);
   --cv-slate-700: hsl(215, 19%, 35%);
@@ -72,7 +77,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Poppins', 'Comic Neue', 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-feature-settings: 'rlig' 1, 'calt' 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -121,6 +126,26 @@
   }
 }
 
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(1deg); }
+  50% { transform: rotate(-1deg); }
+  75% { transform: rotate(1deg); }
+  100% { transform: rotate(0deg); }
+}
+
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out;
 }
@@ -131,4 +156,28 @@
 
 .animate-fade-in-delay-long {
   animation: fadeIn 0.8s ease-out 0.6s both;
+}
+
+.animate-rainbow {
+  background: linear-gradient(-45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #8b00ff);
+  background-size: 400% 400%;
+  animation: rainbow 3s ease infinite;
+}
+
+.animate-bounce-fun {
+  animation: bounce 2s infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+.text-fun {
+  font-family: 'Comic Neue', cursive;
+  font-weight: 700;
+}
+
+.text-playful {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
 }
