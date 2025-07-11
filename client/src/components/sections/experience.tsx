@@ -8,19 +8,19 @@ export default function Experience() {
       icon: ProjectorIcon,
       title: "Project Management",
       description: "Agile, Scrum, PMP-certified with expertise in complex project delivery",
-      color: "from-purple-500 to-pink-500"
+      color: "from-blue-500 to-cyan-500"
     },
     {
       icon: Users,
       title: "Team Leadership",
       description: "Cross-functional team management and stakeholder alignment",
-      color: "from-orange-500 to-red-500"
+      color: "from-teal-500 to-green-500"
     },
     {
       icon: TrendingUp,
       title: "Strategic Planning",
       description: "Data-driven decision making and process optimization",
-      color: "from-blue-500 to-green-500"
+      color: "from-indigo-500 to-blue-500"
     }
   ];
 

@@ -18,10 +18,10 @@ export default function Hero() {
       }}
     >
       <div className="text-center text-white px-4">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in bg-gradient-to-r from-blue-400 via-teal-400 to-green-400 bg-clip-text text-transparent">
           Sarah Mitchell
         </h1>
-        <p className="text-xl md:text-2xl mb-8 font-light animate-fade-in-delay bg-gradient-to-r from-blue-200 to-green-200 bg-clip-text text-transparent">
+        <p className="text-xl md:text-2xl mb-8 font-light animate-fade-in-delay bg-gradient-to-r from-indigo-200 to-cyan-200 bg-clip-text text-transparent">
           Project Manager & Aspiring Chief of Staff
         </p>
         <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90 animate-fade-in-delay-long">
@@ -31,7 +31,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in-delay-long">
           <Button 
             size="lg"
-            className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 font-semibold transition-all transform hover:scale-105 shadow-lg"
+            className="bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white px-8 py-3 font-semibold transition-all transform hover:scale-105 shadow-lg"
             onClick={() => scrollToSection("#contact")}
           >
             Let's Connect
@@ -39,7 +39,7 @@ export default function Hero() {
           <Button 
             size="lg"
             variant="outline"
-            className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-slate-900 px-8 py-3 font-semibold transition-all transform hover:scale-105"
+            className="border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900 px-8 py-3 font-semibold transition-all transform hover:scale-105"
             onClick={() => scrollToSection("#writing")}
           >
             Check My Writing
