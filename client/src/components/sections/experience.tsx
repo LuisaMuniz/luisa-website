@@ -6,8 +6,8 @@ export default function Experience() {
   const skills = [
     {
       icon: ProjectorIcon,
-      title: "Project Management",
-      description: "Agile, Scrum, PMP-certified with expertise in complex project delivery",
+      title: "Production Coordination",
+      description: "Expert in workflow management, scheduling, and resource allocation",
       color: "from-blue-500 to-cyan-500"
     },
     {
@@ -18,8 +18,8 @@ export default function Experience() {
     },
     {
       icon: TrendingUp,
-      title: "Strategic Planning",
-      description: "Data-driven decision making and process optimization",
+      title: "Process Optimization",
+      description: "Data-driven decision making and operational efficiency improvements",
       color: "from-indigo-500 to-blue-500"
     }
   ];

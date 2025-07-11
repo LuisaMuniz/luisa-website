@@ -7,7 +7,7 @@ export default function About() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent mb-4">About Me</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            A passionate project manager with a unique blend of analytical thinking and creative problem-solving, 
+            A passionate production coordinator with a unique blend of analytical thinking and creative problem-solving, 
             ready to step into a Chief of Staff role.
           </p>
         </div>
@@ -18,8 +18,8 @@ export default function About() {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold text-slate-800 mb-4">Professional Journey</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  With over 8 years of experience in project management across tech and consulting industries, 
-                  I've successfully led cross-functional teams, managed complex initiatives, and delivered 
+                  With over 5 years of experience in production coordination across various industries, 
+                  I've successfully managed complex workflows, coordinated cross-functional teams, and delivered 
                   results that exceeded stakeholder expectations.
                 </p>
               </CardContent>
@@ -44,7 +44,7 @@ export default function About() {
             />
             <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-blue-500 to-teal-500 p-6 rounded-xl shadow-lg transform hover:scale-110 transition-transform duration-300">
               <div className="text-center">
-                <div className="text-3xl font-bold text-white animate-bounce-fun">8+</div>
+                <div className="text-3xl font-bold text-white animate-bounce-fun">5+</div>
                 <div className="text-white text-sm">Years Experience</div>
               </div>
             </div>

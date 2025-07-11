@@ -92,19 +92,19 @@ export default function Contact() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <Mail className="w-5 h-5 text-blue-600" />
-                    <span className="text-slate-600">sarah.mitchell@email.com</span>
+                    <span className="text-slate-600">lmunizsimas@gmail.com</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Phone className="w-5 h-5 text-blue-600" />
-                    <span className="text-slate-600">+1 (555) 123-4567</span>
+                    <span className="text-slate-600">+1 (778) 389-4702</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <FaLinkedin className="w-5 h-5 text-blue-600" />
-                    <span className="text-slate-600">linkedin.com/in/sarahmitchell</span>
+                    <span className="text-slate-600">linkedin.com/in/luisa-muniz</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <MapPin className="w-5 h-5 text-blue-600" />
-                    <span className="text-slate-600">San Francisco, CA</span>
+                    <span className="text-slate-600">Canada (Remote)</span>
                   </div>
                 </div>
               </CardContent>

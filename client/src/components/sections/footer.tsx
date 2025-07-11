@@ -20,9 +20,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">Sarah Mitchell</h3>
+            <h3 className="text-2xl font-bold mb-4">Luisa Muniz</h3>
             <p className="text-slate-400">
-              Project Manager & Aspiring Chief of Staff<br />
+              Production Coordinator & Aspiring Chief of Staff<br />
               Transforming vision into reality through strategic execution.
             </p>
           </div>
@@ -59,7 +59,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-slate-700 mt-8 pt-8 text-center text-slate-400">
-          <p>&copy; 2024 Sarah Mitchell. All rights reserved.</p>
+          <p>&copy; 2024 Luisa Muniz. All rights reserved.</p>
         </div>
       </div>
     </footer>
