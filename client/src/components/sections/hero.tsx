@@ -25,9 +25,7 @@ export default function Hero() {
           Production Coordinator & Aspiring Chief of Staff
         </p>
         <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90 animate-fade-in-delay-long">
-          Experienced Production Coordinator skilled in scheduling, budgeting, day-to-day management,
-          staffing and high-level planning. Versatile in different areas of the entertainment industry with a
-          particular focus on the development and application of new technologies.
+          Looking to change industries to a dynamic environment. I am skilled in scheduling, budgeting, day-to-day management, staffing and high-level planning. Love taking on new challenges and will do what it takes to get the job done. I am curious, reliable and proactive. If you need someone like me on your team, let's chat!
         </p>
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in-delay-long">
           <Button 
