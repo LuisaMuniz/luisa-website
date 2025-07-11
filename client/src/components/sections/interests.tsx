@@ -6,29 +6,30 @@ export default function Interests() {
   const interests = [
     {
       icon: BookOpen,
-      title: "Professional Blog",
-      description: "Sharing insights on project management, leadership, and organizational efficiency.",
-      link: "Read Articles →",
-      color: "text-blue-600"
+      title: "Ice Cream for Lunch",
+      description: "My personal blog where I share thoughts, experiences, and insights about life and work.",
+      link: "Read Blog →",
+      color: "text-blue-600",
+      linkUrl: "https://substack.com/@icecreamforlunch"
     },
     {
       icon: ChefHat,
       title: "Culinary Adventures",
-      description: "Exploring international cuisines and the art of bringing people together through food.",
+      description: "Going on culinary adventures and exploring flavors from around the world.",
       image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=200",
       color: "text-yellow-600"
     },
     {
       icon: Globe,
-      title: "World Explorer",
-      description: "Discovering new cultures, perspectives, and inspiration from around the globe.",
+      title: "Exploring the World",
+      description: "Discovering new places, cultures, and perspectives from around the globe.",
       image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=200",
       color: "text-green-600"
     },
     {
       icon: BarChart3,
-      title: "Data Enthusiast",
-      description: "Finding beauty in well-organized data and creating systems that make complex information accessible.",
+      title: "Building Spreadsheets",
+      description: "Creating organized systems and finding beauty in well-structured data and spreadsheets.",
       color: "text-purple-600"
     }
   ];
@@ -54,7 +55,10 @@ export default function Interests() {
                   <h3 className="text-xl font-semibold text-slate-800 mb-3">{interest.title}</h3>
                   <p className="text-slate-600 mb-4">{interest.description}</p>
                   {interest.link && (
-                    <button className="text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200">
+                    <button 
+                      onClick={() => interest.linkUrl && window.open(interest.linkUrl, '_blank')}
+                      className="text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
+                    >
                       {interest.link}
                     </button>
                   )}
