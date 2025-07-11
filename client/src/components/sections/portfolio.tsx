@@ -6,8 +6,9 @@ export default function Projects() {
     {
       title: "Moana 2 (2024)",
       description: "Successfully delivered all new characters for Disney's highly anticipated sequel with a newly hired team of 30 artists while learning the modern Disney animation pipeline.",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      tags: ["Disney Animation", "Character Development", "Team Leadership"]
+      image: "https://m.media-amazon.com/images/M/MV5BNzY5NzVkNzMtYjU3MS00NDYwLWJhMTktN2Y2NzYxNzJkNzdhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
+      tags: ["Disney Animation", "Character Development", "Team Leadership"],
+      link: "https://www.imdb.com/title/tt13622970/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_moana%25202"
     },
     {
       title: "Unannounced Disney Project (2025)",
@@ -18,7 +19,7 @@ export default function Projects() {
     {
       title: "Flora and Ulysses (2020)",
       description: "Contributed to Disney+ original film production, gaining experience in streaming platform content development and delivery.",
-      image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      image: "https://m.media-amazon.com/images/M/MV5BODlkYjI5ZmEtNDMxNi00ZDZmLWFmNTMtYzJjNTRkNmFkNDNkXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg",
       tags: ["Disney+", "Live Action", "Streaming"]
     }
   ];
@@ -38,14 +39,32 @@ export default function Projects() {
               className="bg-white hover:shadow-xl transition-shadow duration-300 overflow-hidden group"
             >
               <div className="relative overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                {project.link ? (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </a>
+                ) : (
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                )}
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-slate-800 mb-3">{project.title}</h3>
+                <h3 className="text-xl font-semibold text-slate-800 mb-3">
+                  {project.link ? (
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
+                      {project.title}
+                    </a>
+                  ) : (
+                    project.title
+                  )}
+                </h3>
                 <p className="text-slate-600 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIndex) => (
