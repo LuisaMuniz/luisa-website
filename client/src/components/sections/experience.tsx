@@ -6,7 +6,7 @@ export default function Experience() {
   const skills = [
     {
       icon: ProjectorIcon,
-      title: "Production Coordination",
+      title: "Project Management",
       description: "Expert in workflow management, scheduling, and resource allocation",
       color: "from-blue-500 to-cyan-500"
     },
