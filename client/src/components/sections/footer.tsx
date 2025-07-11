@@ -1,4 +1,4 @@
-import { FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaEnvelope, FaBlog } from "react-icons/fa";
 
 export default function Footer() {
   const scrollToSection = (href: string) => {
@@ -53,6 +53,9 @@ export default function Footer() {
               </a>
               <a href="#" className="text-slate-400 hover:text-white transition-colors">
                 <FaEnvelope className="w-6 h-6" />
+              </a>
+              <a href="https://icecreamforlunch.substack.com/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+                <FaBlog className="w-6 h-6" />
               </a>
             </div>
           </div>
