@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import floraUlyssesImage from "@assets/p18163076_v_h8_ah_1752231908563.jpg";
 
 export default function Projects() {
   const projects = [
@@ -19,7 +20,7 @@ export default function Projects() {
     {
       title: "Flora and Ulysses (2020)",
       description: "Contributed to Disney+ original film production, gaining experience in streaming platform content development and delivery.",
-      image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
+      image: floraUlyssesImage,
       tags: ["Disney+", "Live Action", "Streaming"]
     }
   ];
