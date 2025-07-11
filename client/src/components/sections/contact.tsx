@@ -165,7 +165,7 @@ export default function Contact() {
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white transform hover:scale-105 transition-all duration-300 shadow-lg"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white transform hover:scale-105 transition-all duration-300 shadow-lg"
                   disabled={contactMutation.isPending}
                 >
                   {contactMutation.isPending ? "Sending..." : "Send Message"}

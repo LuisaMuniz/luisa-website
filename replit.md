@@ -7,6 +7,7 @@ This is a modern, responsive CV/portfolio website built with React and Express. 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Design preferences: Clean, professional design with solid colors instead of gradients. Poppins font for modern, readable typography.
 
 ## System Architecture
 

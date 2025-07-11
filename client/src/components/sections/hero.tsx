@@ -32,7 +32,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in-delay-long">
           <Button 
             size="lg"
-            className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-8 py-3 font-semibold transition-all transform hover:scale-105 shadow-lg"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 font-semibold transition-all transform hover:scale-105 shadow-lg"
             onClick={() => scrollToSection("#contact")}
           >
             Let's Connect
