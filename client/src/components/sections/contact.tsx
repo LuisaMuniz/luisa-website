@@ -1,0 +1,180 @@
+import { useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { useToast } from "@/hooks/use-toast";
+import { useMutation } from "@tanstack/react-query";
+import { apiRequest } from "@/lib/queryClient";
+import { Check, Mail, Phone, MapPin } from "lucide-react";
+import { FaLinkedin } from "react-icons/fa";
+
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+  const { toast } = useToast();
+
+  const contactMutation = useMutation({
+    mutationFn: async (data: typeof formData) => {
+      return await apiRequest("POST", "/api/contact", data);
+    },
+    onSuccess: () => {
+      toast({
+        title: "Message sent successfully!",
+        description: "I'll get back to you soon.",
+      });
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    },
+    onError: (error) => {
+      toast({
+        title: "Failed to send message",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    },
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    contactMutation.mutate(formData);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+
+  const whyChiefOfStaff = [
+    "Strategic thinking with operational excellence",
+    "Cross-functional collaboration and communication",
+    "Process optimization and organizational development",
+    "Executive support and decision-making facilitation"
+  ];
+
+  return (
+    <section id="contact" className="section-padding bg-slate-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">Let's Connect</h2>
+          <p className="text-xl text-slate-600">Ready to discuss how I can contribute as your next Chief of Staff</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12">
+          <div className="space-y-8">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-2xl font-semibold text-slate-800">Why Chief of Staff?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  {whyChiefOfStaff.map((item, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <Check className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
+                      <p className="text-slate-600">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-2xl font-semibold text-slate-800">Get In Touch</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <Mail className="w-5 h-5 text-blue-600" />
+                    <span className="text-slate-600">sarah.mitchell@email.com</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Phone className="w-5 h-5 text-blue-600" />
+                    <span className="text-slate-600">+1 (555) 123-4567</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <FaLinkedin className="w-5 h-5 text-blue-600" />
+                    <span className="text-slate-600">linkedin.com/in/sarahmitchell</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <MapPin className="w-5 h-5 text-blue-600" />
+                    <span className="text-slate-600">San Francisco, CA</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-2xl font-semibold text-slate-800">Send a Message</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="space-y-2">
+                  <Label htmlFor="name">Name</Label>
+                  <Input
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="your.email@company.com"
+                    required
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="subject">Subject</Label>
+                  <Input
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    placeholder="Chief of Staff Opportunity"
+                    required
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="message">Message</Label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={4}
+                    placeholder="Tell me about the opportunity..."
+                    required
+                  />
+                </div>
+                <Button 
+                  type="submit" 
+                  className="w-full bg-blue-600 hover:bg-blue-700"
+                  disabled={contactMutation.isPending}
+                >
+                  {contactMutation.isPending ? "Sending..." : "Send Message"}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+}
