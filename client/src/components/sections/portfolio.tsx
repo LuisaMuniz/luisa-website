@@ -1,20 +1,22 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import floraUlyssesImage from "@assets/p18163076_v_h8_ah_1752231908563.jpg";
+import moana2Image from "@assets/compose_1752231966148.webp";
+import disneyProjectGraphic from "@/assets/disney-project-graphic.svg";
 
 export default function Projects() {
   const projects = [
     {
       title: "Moana 2 (2024)",
       description: "Successfully delivered all new characters for Disney's highly anticipated sequel with a newly hired team of 30 artists while learning the modern Disney animation pipeline.",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
+      image: moana2Image,
       tags: ["Disney Animation", "Character Development", "Team Leadership"],
       link: "https://www.imdb.com/title/tt13622970/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_moana%25202"
     },
     {
       title: "Unannounced Disney Project (2025)",
       description: "Currently coordinating production for an upcoming Disney animated feature, managing complex workflows and interdepartmental communication.",
-      image: "https://images.unsplash.com/photo-1489370603040-dc6c28a1d7a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      image: disneyProjectGraphic,
       tags: ["Disney Animation", "Production Management", "Confidential"]
     },
     {
@@ -45,14 +47,14 @@ export default function Projects() {
                     <img 
                       src={project.image} 
                       alt={project.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-56 object-contain group-hover:scale-105 transition-all duration-300 hover:brightness-110 bg-gradient-to-br from-blue-50 to-purple-50"
                     />
                   </a>
                 ) : (
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-56 object-contain group-hover:scale-105 transition-all duration-300 hover:brightness-110 bg-gradient-to-br from-blue-50 to-purple-50"
                   />
                 )}
               </div>

@@ -1,0 +1,86 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bgGradient)"/>
+  
+  <!-- Gradient definitions -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3730a3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Magic sparkles -->
+  <circle cx="150" cy="100" r="3" fill="url(#starGradient)" opacity="0.8"/>
+  <circle cx="650" cy="80" r="2" fill="url(#starGradient)" opacity="0.6"/>
+  <circle cx="700" cy="150" r="2.5" fill="url(#starGradient)" opacity="0.7"/>
+  <circle cx="100" cy="200" r="2" fill="url(#starGradient)" opacity="0.5"/>
+  <circle cx="650" cy="320" r="3" fill="url(#starGradient)" opacity="0.8"/>
+  <circle cx="120" cy="320" r="2" fill="url(#starGradient)" opacity="0.6"/>
+  
+  <!-- Main content container -->
+  <rect x="50" y="50" width="700" height="300" rx="20" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  
+  <!-- Disney-style castle silhouette -->
+  <g transform="translate(100,120)">
+    <!-- Castle base -->
+    <rect x="0" y="80" width="120" height="60" fill="rgba(255,255,255,0.9)"/>
+    <!-- Main tower -->
+    <rect x="40" y="40" width="40" height="100" fill="rgba(255,255,255,0.9)"/>
+    <!-- Side towers -->
+    <rect x="10" y="60" width="25" height="80" fill="rgba(255,255,255,0.9)"/>
+    <rect x="85" y="60" width="25" height="80" fill="rgba(255,255,255,0.9)"/>
+    <!-- Tower tops -->
+    <polygon points="40,40 50,20 70,20 80,40" fill="rgba(255,255,255,0.9)"/>
+    <polygon points="10,60 17.5,45 27.5,45 35,60" fill="rgba(255,255,255,0.9)"/>
+    <polygon points="85,60 92.5,45 102.5,45 110,60" fill="rgba(255,255,255,0.9)"/>
+    <!-- Flags -->
+    <rect x="58" y="15" width="2" height="10" fill="#dc2626"/>
+    <polygon points="60,15 70,18 60,21" fill="#dc2626"/>
+  </g>
+  
+  <!-- Film strip element -->
+  <g transform="translate(500,120)">
+    <rect x="0" y="20" width="150" height="100" fill="rgba(255,255,255,0.9)" rx="5"/>
+    <rect x="5" y="25" width="20" height="15" fill="#1e3a8a"/>
+    <rect x="30" y="25" width="20" height="15" fill="#1e3a8a"/>
+    <rect x="55" y="25" width="20" height="15" fill="#1e3a8a"/>
+    <rect x="80" y="25" width="20" height="15" fill="#1e3a8a"/>
+    <rect x="105" y="25" width="20" height="15" fill="#1e3a8a"/>
+    <rect x="130" y="25" width="15" height="15" fill="#1e3a8a"/>
+    
+    <rect x="5" y="100" width="20" height="15" fill="#1e3a8a"/>
+    <rect x="30" y="100" width="20" height="15" fill="#1e3a8a"/>
+    <rect x="55" y="100" width="20" height="15" fill="#1e3a8a"/>
+    <rect x="80" y="100" width="20" height="15" fill="#1e3a8a"/>
+    <rect x="105" y="100" width="20" height="15" fill="#1e3a8a"/>
+    <rect x="130" y="100" width="15" height="15" fill="#1e3a8a"/>
+    
+    <!-- Screen content -->
+    <rect x="10" y="45" width="130" height="50" fill="#f8fafc" rx="3"/>
+    <text x="75" y="75" text-anchor="middle" fill="#1e3a8a" font-family="Arial, sans-serif" font-size="16" font-weight="bold">CONFIDENTIAL</text>
+  </g>
+  
+  <!-- Title text -->
+  <text x="400" y="280" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="32" font-weight="bold">DISNEY ANIMATION</text>
+  <text x="400" y="310" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="18">Upcoming Project • 2025</text>
+  
+  <!-- Production elements -->
+  <g transform="translate(280,180)">
+    <!-- Clapperboard -->
+    <rect x="0" y="0" width="60" height="40" fill="rgba(255,255,255,0.9)" rx="3"/>
+    <rect x="0" y="0" width="60" height="12" fill="#1f2937"/>
+    <rect x="0" y="16" width="60" height="12" fill="#1f2937"/>
+    <rect x="0" y="32" width="60" height="8" fill="#1f2937"/>
+    <text x="30" y="26" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8">SCENE 1</text>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="400" cy="350" r="20" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  <circle cx="400" cy="350" r="15" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+  <circle cx="400" cy="350" r="10" fill="rgba(255,255,255,0.7)"/>
+</svg>
