@@ -1,4 +1,4 @@
-import worldMapSvg from "@/assets/world-map.svg";
+import worldMapSvg from "../../assets/world-map.svg";
 
 export default function GlobalExperience() {
   const languages = [
