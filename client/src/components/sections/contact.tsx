@@ -62,7 +62,7 @@ export default function Contact() {
     <section id="contact" className="section-padding bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-500 to-cyan-600 bg-clip-text text-transparent mb-4">Let's Connect</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">Let's Connect</h2>
           <p className="text-xl text-slate-600">Ready to discuss how I can contribute as your next Chief of Staff</p>
         </div>
 

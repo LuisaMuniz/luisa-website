@@ -49,7 +49,7 @@ export default function Experience() {
     <section id="experience" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent mb-4">Experience & Skills</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">Experience & Skills</h2>
           <p className="text-xl text-slate-600">A comprehensive overview of my professional capabilities</p>
         </div>
 

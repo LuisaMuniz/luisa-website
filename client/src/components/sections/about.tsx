@@ -6,7 +6,7 @@ export default function About() {
     <section id="about" className="section-padding bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent mb-4">About Me</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">About Me</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             A passionate production coordinator with extensive experience in entertainment industry workflows, 
             skilled in scheduling, budgeting, and cross-functional team management, ready to step into a Chief of Staff role.
@@ -57,7 +57,7 @@ export default function About() {
         {/* Education Section */}
         <div className="mt-20">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent mb-4">Education</h3>
+            <h3 className="text-3xl font-bold text-blue-600 mb-4">Education</h3>
             <p className="text-lg text-slate-600">Academic foundation and international experience</p>
           </div>
           

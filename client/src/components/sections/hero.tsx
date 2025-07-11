@@ -18,10 +18,10 @@ export default function Hero() {
       }}
     >
       <div className="text-center text-white px-4">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in bg-gradient-to-r from-blue-400 via-teal-400 to-green-400 bg-clip-text text-transparent">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-white">
           Luisa Muniz
         </h1>
-        <p className="text-xl md:text-2xl mb-8 font-light animate-fade-in-delay bg-gradient-to-r from-indigo-200 to-cyan-200 bg-clip-text text-transparent">
+        <p className="text-xl md:text-2xl mb-8 font-light animate-fade-in-delay text-blue-100">
           Production Coordinator & Aspiring Chief of Staff
         </p>
         <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90 animate-fade-in-delay-long">
