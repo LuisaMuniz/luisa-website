@@ -1,6 +1,6 @@
-<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg width="1024" height="578" viewBox="0 0 1024 578" xmlns="http://www.w3.org/2000/svg">
   <!-- Background -->
-  <rect width="800" height="400" fill="url(#bgGradient)"/>
+  <rect width="1024" height="578" fill="url(#bgGradient)"/>
   
   <!-- Gradient definitions -->
   <defs>
@@ -11,6 +11,6 @@
   </defs>
   
   <!-- Main Title -->
-  <text x="400" y="220" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="72" font-weight="bold">UNANNOUNCED</text>
-  <text x="400" y="260" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="24">Disney Animation • 2025</text>
+  <text x="512" y="320" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="90" font-weight="bold">UNANNOUNCED</text>
+  <text x="512" y="370" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="32">Disney Animation • 2025</text>
 </svg>
