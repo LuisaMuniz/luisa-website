@@ -1,41 +1,35 @@
 export default function GlobalExperience() {
-  const languages = [
-    { name: "English", level: "Native/Fluent", countries: ["Canada", "UK"], flags: ["🇨🇦", "🇬🇧"] },
-    { name: "Portuguese", level: "Native/Fluent", countries: ["Brazil", "Portugal"], flags: ["🇧🇷", "🇵🇹"] },
-    { name: "Spanish", level: "Native/Fluent", countries: ["Chile", "Latin America"], flags: ["🇨🇱", "🇪🇸"] },
-    { name: "Italian", level: "Conversational", countries: ["Italy", "Europe"], flags: ["🇮🇹"] }
-  ];
-
   const globalExperience = [
     {
-      country: "Canada",
+      region: "North America",
+      countries: ["Canada", "United States"],
       flag: "🇨🇦",
-      description: "Native English speaker with Canadian work experience and cultural understanding",
-      languages: ["English"]
+      description: "Production coordination for major entertainment studios with cross-cultural team management",
+      experience: "Disney animation projects, studio operations, international collaboration",
+      languages: [
+        { name: "English", level: "Native/Fluent", flags: ["🇨🇦", "🇺🇸"] }
+      ]
     },
     {
-      country: "United Kingdom",
-      flag: "🇬🇧",
-      description: "Cross-cultural communication and entertainment industry project management",
-      languages: ["English"]
-    },
-    {
-      country: "Brazil",
+      region: "South America",
+      countries: ["Brazil", "Chile"],
       flag: "🇧🇷",
-      description: "Native Portuguese speaker with deep local market knowledge and cultural insights",
-      languages: ["Portuguese"]
+      description: "Cultural consulting and localization projects with deep regional market knowledge",
+      experience: "Portuguese/Spanish market expertise, regional content adaptation",
+      languages: [
+        { name: "Portuguese", level: "Native/Fluent", flags: ["🇧🇷"] },
+        { name: "Spanish", level: "Native/Fluent", flags: ["🇨🇱"] }
+      ]
     },
     {
-      country: "Portugal",
-      flag: "🇵🇹",
-      description: "European market experience with Portuguese language fluency",
-      languages: ["Portuguese"]
-    },
-    {
-      country: "Chile",
-      flag: "🇨🇱",
-      description: "Latin American market understanding and Spanish communication skills",
-      languages: ["Spanish"]
+      region: "Europe",
+      countries: ["United Kingdom", "Italy"],
+      flag: "🇬🇧",
+      description: "International co-production partnerships with European market insights",
+      experience: "Multi-language project coordination, European entertainment industry",
+      languages: [
+        { name: "Italian", level: "Conversational", flags: ["🇮🇹"] }
+      ]
     }
   ];
 
@@ -74,69 +68,47 @@ export default function GlobalExperience() {
           </div>
         </div>
 
-        {/* Languages Section */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-slate-800 mb-8 text-center">Language Proficiency</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {languages.map((language, index) => (
-              <div 
-                key={index}
-                className="bg-slate-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
-              >
-                <div className="flex justify-center items-center mb-4">
-                  {language.flags.map((flag, flagIndex) => (
-                    <span 
-                      key={flagIndex}
-                      className="text-4xl mx-1"
-                    >
-                      {flag}
-                    </span>
-                  ))}
-                </div>
-                <h4 className="text-xl font-semibold text-slate-800 mb-2">
-                  {language.name}
-                </h4>
-                <p className="text-blue-600 font-medium mb-3">
-                  {language.level}
-                </p>
-                <div className="space-y-1">
-                  {language.countries.map((country, countryIndex) => (
-                    <span 
-                      key={countryIndex}
-                      className="inline-block text-sm text-slate-600 px-2 py-1 bg-white rounded-full mr-1"
-                    >
-                      {country}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Global Experience Section */}
+        {/* Combined Global Experience & Languages Section */}
         <div>
-          <h3 className="text-2xl font-bold text-slate-800 mb-8 text-center">International Experience</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {globalExperience.map((experience, index) => (
+          <h3 className="text-2xl font-bold text-slate-800 mb-8 text-center">Regional Experience & Language Skills</h3>
+          <div className="grid lg:grid-cols-3 gap-8">
+            {globalExperience.map((region, index) => (
               <div 
                 key={index}
-                className="bg-slate-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
+                className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border-l-4 border-blue-600"
               >
-                <div className="flex items-center mb-4">
-                  <span className="text-3xl mr-3">{experience.flag}</span>
-                  <h4 className="text-xl font-semibold text-slate-800">{experience.country}</h4>
+                <div className="flex items-center mb-6">
+                  <span className="text-4xl mr-4">{region.flag}</span>
+                  <h4 className="text-2xl font-bold text-slate-800">{region.region}</h4>
                 </div>
-                <p className="text-slate-600 mb-4">{experience.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {experience.languages.map((lang, langIndex) => (
-                    <span 
-                      key={langIndex}
-                      className="inline-block text-sm text-blue-600 px-2 py-1 bg-blue-100 rounded-full"
-                    >
-                      {lang}
-                    </span>
-                  ))}
+                
+                <div className="mb-4">
+                  <h5 className="font-semibold text-slate-700 mb-2">Countries:</h5>
+                  <p className="text-slate-600">{region.countries.join(", ")}</p>
+                </div>
+                
+                <div className="mb-4">
+                  <h5 className="font-semibold text-slate-700 mb-2">Experience:</h5>
+                  <p className="text-slate-600 mb-2">{region.description}</p>
+                  <p className="text-sm text-slate-500">{region.experience}</p>
+                </div>
+
+                {/* Language Skills for this Region */}
+                <div className="border-t border-slate-200 pt-4">
+                  <h5 className="font-semibold text-slate-700 mb-3">Language Skills:</h5>
+                  <div className="space-y-3">
+                    {region.languages.map((language, langIndex) => (
+                      <div key={langIndex} className="flex items-center justify-between bg-slate-50 rounded-lg p-3">
+                        <div className="flex items-center">
+                          {language.flags.map((flag, flagIndex) => (
+                            <span key={flagIndex} className="text-2xl mr-2">{flag}</span>
+                          ))}
+                          <span className="font-medium text-slate-800">{language.name}</span>
+                        </div>
+                        <span className="text-sm text-blue-600 font-medium">{language.level}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
