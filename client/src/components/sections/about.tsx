@@ -8,8 +8,7 @@ export default function About() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">About Me</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            A passionate production coordinator with extensive experience in entertainment industry workflows, 
-            skilled in scheduling, budgeting, and cross-functional team management, ready to step into a Chief of Staff role.
+            I was born in Chile, my parents are Brazilian and Portuguese. When I turned 18 I moved to Canada to study film. After many opportunities and living in the UK for a year I am moving away from film. I am passionate about giving structure to teams to make life easier for everybody. No task is too small for me and I love to keep a fun light environment at work.
           </p>
         </div>
         
