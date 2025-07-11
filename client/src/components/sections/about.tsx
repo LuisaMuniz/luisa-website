@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import profilePhoto from "@assets/PHOTO-2024-11-26-00-22-53_1752231089328.jpg";
 
 export default function About() {
   return (
@@ -40,7 +41,7 @@ export default function About() {
           
           <div className="relative">
             <img 
-              src="/attached_assets/PHOTO-2024-11-26-00-22-53_1752231089328.jpg" 
+              src={profilePhoto} 
               alt="Luisa Muniz - Professional headshot" 
               className="rounded-xl shadow-2xl w-full h-auto"
             />
