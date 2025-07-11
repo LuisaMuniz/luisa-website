@@ -2,7 +2,7 @@ export default function GlobalExperience() {
   const languages = [
     { name: "English", level: "Native/Fluent", countries: ["Canada", "UK"] },
     { name: "Portuguese", level: "Native/Fluent", countries: ["Brazil", "Portugal"] },
-    { name: "Spanish", level: "Conversational", countries: ["Chile", "Latin America"] },
+    { name: "Spanish", level: "Native/Fluent", countries: ["Chile", "Latin America"] },
     { name: "Italian", level: "Conversational", countries: ["Italy", "Europe"] }
   ];
 
