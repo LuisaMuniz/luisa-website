@@ -54,7 +54,7 @@ export default function Interests() {
                   <h3 className="text-xl font-semibold text-slate-800 mb-3">{interest.title}</h3>
                   <p className="text-slate-600 mb-4">{interest.description}</p>
                   {interest.link && (
-                    <button className="text-blue-600 hover:text-blue-800 font-medium">
+                    <button className="text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200">
                       {interest.link}
                     </button>
                   )}

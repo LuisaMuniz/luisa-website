@@ -32,7 +32,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in-delay-long">
           <Button 
             size="lg"
-            className="bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white px-8 py-3 font-semibold transition-all transform hover:scale-105 shadow-lg"
+            className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-8 py-3 font-semibold transition-all transform hover:scale-105 shadow-lg"
             onClick={() => scrollToSection("#contact")}
           >
             Let's Connect
@@ -40,10 +40,10 @@ export default function Hero() {
           <Button 
             size="lg"
             variant="outline"
-            className="border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900 px-8 py-3 font-semibold transition-all transform hover:scale-105"
+            className="border-2 border-blue-400 text-blue-400 hover:bg-blue-600 hover:text-white px-8 py-3 font-semibold transition-all transform hover:scale-105"
             onClick={() => scrollToSection("#writing")}
           >
-            Check My Writing
+            View Projects
           </Button>
         </div>
       </div>
