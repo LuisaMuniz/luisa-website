@@ -24,84 +24,80 @@ export default function GlobalExperience() {
           <div className="bg-slate-50 rounded-xl p-8 shadow-lg">
             <svg width="100%" height="400" viewBox="0 0 1200 600" className="max-w-5xl mx-auto">
               {/* Background */}
-              <rect width="1200" height="600" fill="#f8fafc"/>
+              <rect width="1200" height="600" fill="#bfdbfe"/>
               
               {/* Gradient definitions */}
               <defs>
-                <linearGradient id="oceanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{stopColor:'#bfdbfe', stopOpacity:1}} />
-                  <stop offset="100%" style={{stopColor:'#93c5fd', stopOpacity:1}} />
-                </linearGradient>
                 <linearGradient id="highlightGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" style={{stopColor:'#3b82f6', stopOpacity:1}} />
                   <stop offset="100%" style={{stopColor:'#1d4ed8', stopOpacity:1}} />
                 </linearGradient>
               </defs>
               
-              {/* Ocean background */}
-              <rect width="1200" height="600" fill="url(#oceanGradient)"/>
+              {/* North America - Base */}
+              <path d="M 50 120 L 100 100 L 150 95 L 200 100 L 250 110 L 300 125 L 350 140 L 380 160 L 400 185 L 410 210 L 400 240 L 380 265 L 350 285 L 300 300 L 250 310 L 200 305 L 150 295 L 100 280 L 60 260 L 40 230 L 35 190 L 50 120 Z" fill="#e5e7eb" stroke="#d1d5db" strokeWidth="1"/>
               
-              {/* North America */}
-              <path d="M 100 120 Q 120 100 160 110 Q 200 100 240 120 Q 280 140 320 160 Q 360 180 380 220 Q 400 260 380 300 Q 360 340 320 360 Q 280 380 240 360 Q 200 340 160 320 Q 120 300 100 260 Q 80 220 100 180 Z" fill="#e5e7eb" stroke="#d1d5db" strokeWidth="1"/>
+              {/* Canada - Highlighted */}
+              <path d="M 80 80 L 120 70 L 160 65 L 200 70 L 240 80 L 280 95 L 320 110 L 350 125 L 380 145 L 400 170 L 410 195 L 400 220 L 380 240 L 350 255 L 320 270 L 280 280 L 240 275 L 200 270 L 160 260 L 120 245 L 90 225 L 70 195 L 65 155 L 80 80 Z" fill="url(#highlightGradient)" stroke="#1e40af" strokeWidth="2"/>
               
-              {/* Canada (highlighted) */}
-              <path d="M 120 80 Q 140 60 180 70 Q 220 60 260 80 Q 300 100 340 120 Q 380 140 400 180 Q 420 220 400 260 Q 380 300 340 320 Q 300 340 260 320 Q 220 300 180 280 Q 140 260 120 220 Q 100 180 120 140 Z" fill="url(#highlightGradient)" stroke="#1e40af" strokeWidth="2"/>
+              {/* United States */}
+              <path d="M 60 200 L 100 190 L 140 185 L 180 190 L 220 200 L 260 215 L 300 230 L 340 245 L 370 265 L 390 290 L 395 315 L 385 340 L 365 360 L 335 375 L 295 385 L 255 390 L 215 385 L 175 375 L 135 360 L 95 340 L 65 315 L 45 285 L 40 250 L 60 200 Z" fill="#e5e7eb" stroke="#d1d5db" strokeWidth="1"/>
               
-              {/* South America */}
-              <path d="M 260 320 Q 280 340 300 380 Q 320 420 340 460 Q 360 500 340 540 Q 320 580 280 580 Q 240 580 200 560 Q 160 540 140 500 Q 120 460 140 420 Q 160 380 200 360 Q 240 340 260 320 Z" fill="#e5e7eb" stroke="#d1d5db" strokeWidth="1"/>
+              {/* South America - Base */}
+              <path d="M 220 340 L 250 360 L 280 380 L 310 400 L 340 425 L 365 450 L 380 480 L 390 510 L 385 540 L 370 565 L 345 580 L 315 585 L 285 580 L 255 570 L 225 555 L 195 535 L 175 510 L 165 480 L 170 450 L 185 420 L 205 395 L 220 340 Z" fill="#e5e7eb" stroke="#d1d5db" strokeWidth="1"/>
               
-              {/* Chile (highlighted) */}
-              <path d="M 200 400 Q 210 420 220 460 Q 230 500 225 540 Q 220 580 210 580 Q 200 580 190 560 Q 180 540 175 500 Q 170 460 175 420 Q 180 400 190 400 Q 195 400 200 400 Z" fill="url(#highlightGradient)" stroke="#1e40af" strokeWidth="2"/>
+              {/* Brazil - Highlighted */}
+              <path d="M 240 360 L 270 380 L 300 400 L 330 420 L 355 445 L 375 470 L 385 495 L 380 520 L 370 545 L 350 560 L 325 570 L 300 565 L 275 555 L 250 540 L 225 520 L 205 495 L 195 470 L 200 445 L 215 420 L 235 395 L 240 360 Z" fill="url(#highlightGradient)" stroke="#1e40af" strokeWidth="2"/>
               
-              {/* Brazil (highlighted) */}
-              <path d="M 240 340 Q 280 360 320 380 Q 360 400 380 440 Q 400 480 380 520 Q 360 560 320 560 Q 280 560 240 540 Q 200 520 180 480 Q 160 440 180 400 Q 200 360 240 340 Z" fill="url(#highlightGradient)" stroke="#1e40af" strokeWidth="2"/>
+              {/* Chile - Highlighted */}
+              <path d="M 180 420 L 190 440 L 195 470 L 200 500 L 205 530 L 210 560 L 205 580 L 195 580 L 185 560 L 180 530 L 175 500 L 170 470 L 175 440 L 180 420 Z" fill="url(#highlightGradient)" stroke="#1e40af" strokeWidth="2"/>
               
-              {/* Europe */}
-              <path d="M 480 140 Q 520 120 560 130 Q 600 140 640 160 Q 680 180 700 220 Q 720 260 700 300 Q 680 340 640 360 Q 600 380 560 360 Q 520 340 480 320 Q 440 300 420 260 Q 400 220 420 180 Q 440 160 480 140 Z" fill="#e5e7eb" stroke="#d1d5db" strokeWidth="1"/>
+              {/* Europe - Base */}
+              <path d="M 520 140 L 560 130 L 600 135 L 640 150 L 680 170 L 710 195 L 730 225 L 740 255 L 735 285 L 720 310 L 695 330 L 665 345 L 630 355 L 590 350 L 550 340 L 510 325 L 480 305 L 460 280 L 450 250 L 455 220 L 470 195 L 490 170 L 520 140 Z" fill="#e5e7eb" stroke="#d1d5db" strokeWidth="1"/>
               
-              {/* UK (highlighted) */}
-              <path d="M 460 160 Q 470 150 485 155 Q 500 160 510 175 Q 520 190 515 205 Q 510 220 495 225 Q 480 230 465 225 Q 450 220 445 205 Q 440 190 445 175 Q 450 165 460 160 Z" fill="url(#highlightGradient)" stroke="#1e40af" strokeWidth="2"/>
+              {/* United Kingdom - Highlighted */}
+              <path d="M 480 160 L 500 150 L 520 155 L 535 170 L 540 190 L 535 210 L 520 225 L 500 230 L 480 225 L 465 210 L 460 190 L 465 170 L 480 160 Z" fill="url(#highlightGradient)" stroke="#1e40af" strokeWidth="2"/>
               
-              {/* Portugal (highlighted) */}
-              <path d="M 440 240 Q 450 230 465 235 Q 480 240 485 255 Q 490 270 485 285 Q 480 300 465 305 Q 450 310 435 305 Q 420 300 415 285 Q 410 270 415 255 Q 420 245 440 240 Z" fill="url(#highlightGradient)" stroke="#1e40af" strokeWidth="2"/>
+              {/* Portugal - Highlighted */}
+              <path d="M 460 250 L 475 240 L 490 245 L 500 260 L 505 280 L 500 300 L 485 315 L 470 320 L 455 315 L 445 300 L 440 280 L 445 260 L 460 250 Z" fill="url(#highlightGradient)" stroke="#1e40af" strokeWidth="2"/>
               
               {/* Africa */}
-              <path d="M 500 300 Q 540 320 580 340 Q 620 360 640 400 Q 660 440 640 480 Q 620 520 580 540 Q 540 560 500 540 Q 460 520 440 480 Q 420 440 440 400 Q 460 360 500 340 Q 520 320 500 300 Z" fill="#e5e7eb" stroke="#d1d5db" strokeWidth="1"/>
+              <path d="M 520 300 L 560 320 L 600 340 L 640 365 L 675 395 L 700 430 L 715 470 L 710 510 L 695 545 L 670 575 L 630 590 L 590 585 L 550 575 L 515 560 L 485 540 L 465 515 L 455 485 L 465 455 L 485 425 L 515 395 L 520 300 Z" fill="#e5e7eb" stroke="#d1d5db" strokeWidth="1"/>
               
               {/* Asia */}
-              <path d="M 700 120 Q 740 100 780 110 Q 820 120 860 140 Q 900 160 940 180 Q 980 200 1000 240 Q 1020 280 1000 320 Q 980 360 940 380 Q 900 400 860 380 Q 820 360 780 340 Q 740 320 700 300 Q 660 280 640 240 Q 620 200 640 160 Q 660 140 700 120 Z" fill="#e5e7eb" stroke="#d1d5db" strokeWidth="1"/>
+              <path d="M 740 120 L 780 110 L 820 115 L 860 130 L 900 150 L 940 175 L 980 205 L 1010 240 L 1030 280 L 1035 320 L 1025 360 L 1005 395 L 975 425 L 935 445 L 895 455 L 855 450 L 815 440 L 775 425 L 740 405 L 710 380 L 690 350 L 680 315 L 685 280 L 700 245 L 720 215 L 740 120 Z" fill="#e5e7eb" stroke="#d1d5db" strokeWidth="1"/>
               
               {/* Australia */}
-              <path d="M 840 420 Q 880 400 920 410 Q 960 420 980 460 Q 1000 500 980 540 Q 960 580 920 580 Q 880 580 840 560 Q 800 540 780 500 Q 760 460 780 420 Q 800 400 840 420 Z" fill="#e5e7eb" stroke="#d1d5db" strokeWidth="1"/>
+              <path d="M 900 460 L 940 450 L 980 455 L 1015 470 L 1040 495 L 1050 525 L 1045 555 L 1025 580 L 995 590 L 960 585 L 925 575 L 895 560 L 875 540 L 865 515 L 870 490 L 885 470 L 900 460 Z" fill="#e5e7eb" stroke="#d1d5db" strokeWidth="1"/>
               
               {/* Connection lines from highlighted countries */}
-              <g stroke="#3b82f6" strokeWidth="2" strokeDasharray="5,5" fill="none" opacity="0.6">
-                <path d="M 260 150 Q 350 120 460 180"/>
-                <path d="M 470 200 Q 455 220 450 270"/>
-                <path d="M 430 290 Q 350 320 300 400"/>
-                <path d="M 240 460 Q 220 450 205 460"/>
+              <g stroke="#3b82f6" strokeWidth="2" strokeDasharray="5,5" fill="none" opacity="0.7">
+                <path d="M 280 150 Q 400 120 480 180"/>
+                <path d="M 500 200 Q 485 225 475 270"/>
+                <path d="M 460 310 Q 350 340 300 430"/>
+                <path d="M 240 480 Q 210 470 195 480"/>
               </g>
               
-              {/* Language labels */}
-              <g fontFamily="Arial, sans-serif" fontSize="16" fontWeight="bold" fill="#1e40af">
-                <text x="260" y="130" textAnchor="middle">English</text>
-                <text x="470" y="140" textAnchor="middle">English</text>
-                <text x="430" y="260" textAnchor="middle">Portuguese</text>
-                <text x="300" y="420" textAnchor="middle">Portuguese</text>
-                <text x="205" y="440" textAnchor="middle">Spanish</text>
+              {/* Country labels */}
+              <g fontFamily="Arial, sans-serif" fontSize="14" fontWeight="bold" fill="#1e40af">
+                <text x="280" y="140" textAnchor="middle">CANADA</text>
+                <text x="500" y="140" textAnchor="middle">UK</text>
+                <text x="475" y="240" textAnchor="middle">PORTUGAL</text>
+                <text x="300" y="440" textAnchor="middle">BRAZIL</text>
+                <text x="190" y="460" textAnchor="middle">CHILE</text>
               </g>
               
               {/* Title */}
-              <text x="600" y="50" textAnchor="middle" fill="#1e40af" fontFamily="Arial, sans-serif" fontSize="32" fontWeight="bold">Global Experience & Languages</text>
+              <text x="600" y="40" textAnchor="middle" fill="#1e40af" fontFamily="Arial, sans-serif" fontSize="28" fontWeight="bold">Global Experience & Languages</text>
               
               {/* Legend */}
               <g transform="translate(50,480)">
-                <rect x="0" y="0" width="300" height="100" fill="rgba(255,255,255,0.9)" stroke="#d1d5db" strokeWidth="1" rx="8"/>
-                <text x="150" y="25" textAnchor="middle" fill="#1e40af" fontFamily="Arial, sans-serif" fontSize="18" fontWeight="bold">Countries of Experience</text>
-                <circle cx="30" cy="50" r="8" fill="url(#highlightGradient)"/>
-                <text x="50" y="56" fill="#374151" fontFamily="Arial, sans-serif" fontSize="14">Work & Cultural Experience</text>
-                <rect x="20" y="70" width="16" height="2" fill="#3b82f6" opacity="0.6"/>
-                <text x="50" y="78" fill="#374151" fontFamily="Arial, sans-serif" fontSize="14">Language Connections</text>
+                <rect x="0" y="0" width="280" height="90" fill="rgba(255,255,255,0.95)" stroke="#d1d5db" strokeWidth="1" rx="8"/>
+                <text x="140" y="20" textAnchor="middle" fill="#1e40af" fontFamily="Arial, sans-serif" fontSize="16" fontWeight="bold">Countries of Experience</text>
+                <circle cx="25" cy="40" r="6" fill="url(#highlightGradient)"/>
+                <text x="40" y="45" fill="#374151" fontFamily="Arial, sans-serif" fontSize="12">Work & Cultural Experience</text>
+                <rect x="20" y="60" width="12" height="2" fill="#3b82f6" opacity="0.7"/>
+                <text x="40" y="68" fill="#374151" fontFamily="Arial, sans-serif" fontSize="12">Language Connections</text>
               </g>
             </svg>
           </div>
