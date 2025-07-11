@@ -1,35 +1,32 @@
 export default function GlobalExperience() {
+  const languages = [
+    { name: "English", level: "Native/Fluent", countries: ["Canada", "United States"], flags: ["🇨🇦", "🇺🇸"] },
+    { name: "Portuguese", level: "Native/Fluent", countries: ["Brazil", "Portugal"], flags: ["🇧🇷", "🇵🇹"] },
+    { name: "Spanish", level: "Native/Fluent", countries: ["Chile", "Latin America"], flags: ["🇨🇱", "🇪🇸"] },
+    { name: "Italian", level: "Conversational", countries: ["Italy", "Europe"], flags: ["🇮🇹"] }
+  ];
+
   const globalExperience = [
     {
       region: "North America",
       countries: ["Canada", "United States"],
       flag: "🇨🇦",
       description: "Production coordination for major entertainment studios with cross-cultural team management",
-      experience: "Disney animation projects, studio operations, international collaboration",
-      languages: [
-        { name: "English", level: "Native/Fluent", flags: ["🇨🇦", "🇺🇸"] }
-      ]
+      experience: "Disney animation projects, studio operations, international collaboration"
     },
     {
       region: "South America",
       countries: ["Brazil", "Chile"],
       flag: "🇧🇷",
       description: "Cultural consulting and localization projects with deep regional market knowledge",
-      experience: "Portuguese/Spanish market expertise, regional content adaptation",
-      languages: [
-        { name: "Portuguese", level: "Native/Fluent", flags: ["🇧🇷"] },
-        { name: "Spanish", level: "Native/Fluent", flags: ["🇨🇱"] }
-      ]
+      experience: "Portuguese/Spanish market expertise, regional content adaptation"
     },
     {
       region: "Europe",
       countries: ["United Kingdom", "Italy"],
       flag: "🇬🇧",
       description: "International co-production partnerships with European market insights",
-      experience: "Multi-language project coordination, European entertainment industry",
-      languages: [
-        { name: "Italian", level: "Conversational", flags: ["🇮🇹"] }
-      ]
+      experience: "Multi-language project coordination, European entertainment industry"
     }
   ];
 
@@ -68,9 +65,49 @@ export default function GlobalExperience() {
           </div>
         </div>
 
-        {/* Combined Global Experience & Languages Section */}
+        {/* Languages Section */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-slate-800 mb-8 text-center">Language Proficiency</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {languages.map((language, index) => (
+              <div 
+                key={index}
+                className="bg-slate-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="flex justify-center items-center mb-4">
+                  {language.flags.map((flag, flagIndex) => (
+                    <span 
+                      key={flagIndex}
+                      className="text-4xl mx-1"
+                    >
+                      {flag}
+                    </span>
+                  ))}
+                </div>
+                <h4 className="text-xl font-semibold text-slate-800 mb-2">
+                  {language.name}
+                </h4>
+                <p className="text-blue-600 font-medium mb-3">
+                  {language.level}
+                </p>
+                <div className="space-y-1">
+                  {language.countries.map((country, countryIndex) => (
+                    <span 
+                      key={countryIndex}
+                      className="inline-block text-sm text-slate-600 px-2 py-1 bg-white rounded-full mr-1"
+                    >
+                      {country}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Regional Experience Section */}
         <div>
-          <h3 className="text-2xl font-bold text-slate-800 mb-8 text-center">Regional Experience & Language Skills</h3>
+          <h3 className="text-2xl font-bold text-slate-800 mb-8 text-center">Regional Experience</h3>
           <div className="grid lg:grid-cols-3 gap-8">
             {globalExperience.map((region, index) => (
               <div 
@@ -91,24 +128,6 @@ export default function GlobalExperience() {
                   <h5 className="font-semibold text-slate-700 mb-2">Experience:</h5>
                   <p className="text-slate-600 mb-2">{region.description}</p>
                   <p className="text-sm text-slate-500">{region.experience}</p>
-                </div>
-
-                {/* Language Skills for this Region */}
-                <div className="border-t border-slate-200 pt-4">
-                  <h5 className="font-semibold text-slate-700 mb-3">Language Skills:</h5>
-                  <div className="space-y-3">
-                    {region.languages.map((language, langIndex) => (
-                      <div key={langIndex} className="flex items-center justify-between bg-slate-50 rounded-lg p-3">
-                        <div className="flex items-center">
-                          {language.flags.map((flag, flagIndex) => (
-                            <span key={flagIndex} className="text-2xl mr-2">{flag}</span>
-                          ))}
-                          <span className="font-medium text-slate-800">{language.name}</span>
-                        </div>
-                        <span className="text-sm text-blue-600 font-medium">{language.level}</span>
-                      </div>
-                    ))}
-                  </div>
                 </div>
               </div>
             ))}

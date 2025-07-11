@@ -49,7 +49,7 @@ export default function Hero() {
             size="lg"
             variant="outline"
             className="border-2 border-blue-400 text-blue-400 hover:bg-blue-600 hover:text-white px-8 py-3 font-semibold transition-all transform hover:scale-105"
-            onClick={() => window.open("https://icecreamforlunch.substack.com/", "_blank")}
+            onClick={() => window.open("https://substack.com/@icecreamforlunch", "_blank")}
           >
             Read My Blog
           </Button>
