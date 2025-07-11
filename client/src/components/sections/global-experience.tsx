@@ -65,7 +65,45 @@ export default function GlobalExperience() {
           </div>
         </div>
 
-
+        {/* Languages Section */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-slate-800 mb-8 text-center">Language Proficiency</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {languages.map((language, index) => (
+              <div 
+                key={index}
+                className="bg-slate-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="flex justify-center items-center mb-4">
+                  {language.flags.map((flag, flagIndex) => (
+                    <span 
+                      key={flagIndex}
+                      className="text-4xl mx-1"
+                    >
+                      {flag}
+                    </span>
+                  ))}
+                </div>
+                <h4 className="text-xl font-semibold text-slate-800 mb-2">
+                  {language.name}
+                </h4>
+                <p className="text-blue-600 font-medium mb-3">
+                  {language.level}
+                </p>
+                <div className="space-y-1">
+                  {language.countries.map((country, countryIndex) => (
+                    <span 
+                      key={countryIndex}
+                      className="inline-block text-sm text-slate-600 px-2 py-1 bg-white rounded-full mr-1"
+                    >
+                      {country}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* Regional Experience Section */}
         <div>
