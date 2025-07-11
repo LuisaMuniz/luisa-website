@@ -6,7 +6,7 @@ export default function Projects() {
     {
       title: "Moana 2 (2024)",
       description: "Successfully delivered all new characters for Disney's highly anticipated sequel with a newly hired team of 30 artists while learning the modern Disney animation pipeline.",
-      image: "https://m.media-amazon.com/images/M/MV5BNzY5NzVkNzMtYjU3MS00NDYwLWJhMTktN2Y2NzYxNzJkNzdhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
       tags: ["Disney Animation", "Character Development", "Team Leadership"],
       link: "https://www.imdb.com/title/tt13622970/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_moana%25202"
     },
@@ -19,7 +19,7 @@ export default function Projects() {
     {
       title: "Flora and Ulysses (2020)",
       description: "Contributed to Disney+ original film production, gaining experience in streaming platform content development and delivery.",
-      image: "https://m.media-amazon.com/images/M/MV5BODlkYjI5ZmEtNDMxNi00ZDZmLWFmNTMtYzJjNTRkNmFkNDNkXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg",
+      image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
       tags: ["Disney+", "Live Action", "Streaming"]
     }
   ];
