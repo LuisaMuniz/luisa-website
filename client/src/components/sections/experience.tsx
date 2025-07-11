@@ -26,22 +26,22 @@ export default function Experience() {
 
   const experiences = [
     {
-      title: "Senior Project Manager",
-      company: "TechCorp Solutions",
-      period: "2020 - Present",
-      description: "Led digital transformation initiatives, managed $2M+ budgets, and delivered 15+ successful projects with 98% on-time completion rate."
+      title: "Production Coordinator / Production Supervisor",
+      company: "Walt Disney Animation Studios",
+      period: "May 2022 - Present",
+      description: "Coordinated characters, technical animation, and effects departments. Successfully delivered all new characters for Moana 2 (2024) with a newly hired team of 30 artists. Helped build Vancouver studio culture and onboarded new team members."
     },
     {
-      title: "Project Manager",
-      company: "Innovation Consulting Group",
-      period: "2018 - 2020",
-      description: "Managed client engagements, implemented process improvements, and achieved 25% efficiency gains across multiple departments."
+      title: "Virtual Production Coordinator",
+      company: "ScanlineVFX (Netflix)",
+      period: "Dec 2021 - Mar 2022",
+      description: "Helped incorporate Virtual Production into the new Scanline VFX pipeline after Netflix acquisition. Facilitated interdepartmental conversations and strategized solutions for evolving technology."
     },
     {
-      title: "Business Analyst",
-      company: "StartupCo",
-      period: "2016 - 2018",
-      description: "Analyzed business processes, created detailed project plans, and supported the company's growth from 50 to 200 employees."
+      title: "Capture Assistant Producer",
+      company: "Electronic Arts",
+      period: "Sep 2019 - Dec 2021",
+      description: "Coordinated Motion Capture acquisition for FIFA, NHL, MADDEN, UFC, Dragon Age. Worked directly with animation directors and facilitated communication between departments."
     }
   ];
 

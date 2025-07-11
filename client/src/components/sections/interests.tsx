@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BookOpen, ChefHat, Globe, BarChart3 } from "lucide-react";
+import { BookOpen, ChefHat, Globe, BarChart3, Languages } from "lucide-react";
 
 export default function Interests() {
   const interests = [
@@ -109,6 +109,48 @@ export default function Interests() {
                 className="rounded-lg shadow-xl w-full h-auto"
               />
             </div>
+          </div>
+        </div>
+
+        {/* Languages Section */}
+        <div className="mt-16">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold bg-gradient-to-r from-teal-500 to-green-500 bg-clip-text text-transparent mb-4">Languages</h3>
+            <p className="text-lg text-slate-600">Global communication skills for international collaboration</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="text-center hover:shadow-lg transition-shadow duration-300">
+              <CardContent className="p-6">
+                <Languages className="w-8 h-8 mx-auto mb-3 text-blue-600" />
+                <h4 className="font-semibold text-slate-800 mb-2">English</h4>
+                <Badge variant="secondary" className="bg-green-100 text-green-800">Fluent</Badge>
+              </CardContent>
+            </Card>
+            
+            <Card className="text-center hover:shadow-lg transition-shadow duration-300">
+              <CardContent className="p-6">
+                <Languages className="w-8 h-8 mx-auto mb-3 text-orange-600" />
+                <h4 className="font-semibold text-slate-800 mb-2">Portuguese</h4>
+                <Badge variant="secondary" className="bg-green-100 text-green-800">Fluent</Badge>
+              </CardContent>
+            </Card>
+            
+            <Card className="text-center hover:shadow-lg transition-shadow duration-300">
+              <CardContent className="p-6">
+                <Languages className="w-8 h-8 mx-auto mb-3 text-red-600" />
+                <h4 className="font-semibold text-slate-800 mb-2">Spanish</h4>
+                <Badge variant="secondary" className="bg-green-100 text-green-800">Fluent</Badge>
+              </CardContent>
+            </Card>
+            
+            <Card className="text-center hover:shadow-lg transition-shadow duration-300">
+              <CardContent className="p-6">
+                <Languages className="w-8 h-8 mx-auto mb-3 text-purple-600" />
+                <h4 className="font-semibold text-slate-800 mb-2">Italian</h4>
+                <Badge variant="secondary" className="bg-yellow-100 text-yellow-800">Beginner</Badge>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
