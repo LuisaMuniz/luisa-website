@@ -1,9 +1,9 @@
 export default function GlobalExperience() {
   const languages = [
-    { name: "English", level: "Native/Fluent", countries: ["Canada", "UK"] },
-    { name: "Portuguese", level: "Native/Fluent", countries: ["Brazil", "Portugal"] },
-    { name: "Spanish", level: "Native/Fluent", countries: ["Chile", "Latin America"] },
-    { name: "Italian", level: "Conversational", countries: ["Italy", "Europe"] }
+    { name: "English", level: "Native/Fluent", countries: ["Canada", "UK"], flags: ["🇨🇦", "🇬🇧"] },
+    { name: "Portuguese", level: "Native/Fluent", countries: ["Brazil", "Portugal"], flags: ["🇧🇷", "🇵🇹"] },
+    { name: "Spanish", level: "Native/Fluent", countries: ["Chile", "Latin America"], flags: ["🇨🇱", "🇪🇸"] },
+    { name: "Italian", level: "Conversational", countries: ["Italy", "Europe"], flags: ["🇮🇹"] }
   ];
 
   const globalExperience = [
@@ -83,10 +83,15 @@ export default function GlobalExperience() {
                 key={index}
                 className="bg-slate-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-xl">
-                    {language.name.charAt(0)}
-                  </span>
+                <div className="flex justify-center items-center mb-4">
+                  {language.flags.map((flag, flagIndex) => (
+                    <span 
+                      key={flagIndex}
+                      className="text-4xl mx-1"
+                    >
+                      {flag}
+                    </span>
+                  ))}
                 </div>
                 <h4 className="text-xl font-semibold text-slate-800 mb-2">
                   {language.name}
