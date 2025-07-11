@@ -40,8 +40,8 @@ export default function About() {
           
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-              alt="Professional woman in modern office" 
+              src="/attached_assets/PHOTO-2024-11-26-00-22-53_1752231089328.jpg" 
+              alt="Luisa Muniz - Professional headshot" 
               className="rounded-xl shadow-2xl w-full h-auto"
             />
             <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-blue-500 to-teal-500 p-6 rounded-xl shadow-lg transform hover:scale-110 transition-transform duration-300">
