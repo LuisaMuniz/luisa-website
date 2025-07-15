@@ -52,10 +52,14 @@ export default function Contact() {
   };
 
   const whyChiefOfStaff = [
-    "Strategic thinking with operational excellence",
-    "Cross-functional collaboration and communication",
-    "Process optimization and organizational development",
-    "Executive support and decision-making facilitation"
+    "I love strategic thinking with no time wasted",
+    "Always communicating clear expectations",
+    "I will roll up my sleeves and do whatever is needed to move foward",
+    "I can build a solid plan and execute it",
+    "Creating company culture is a priority, I can organize team building events",
+    "There is no project too big or too small for me, I understand the nuances of a start up and wont mind the chaos",
+    "I can manage multiple projects at once and prioritize effectively",
+  "My teammates can relay on me to be there for them",
   ];
 
   return (

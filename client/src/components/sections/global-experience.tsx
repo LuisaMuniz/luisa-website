@@ -38,8 +38,8 @@ export default function GlobalExperience() {
             Global Experience & Languages
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            International perspective with multilingual capabilities and cross-cultural experience 
-            spanning four continents and five countries, bringing valuable global insights to leadership roles.
+            I bring international perspective to anything I do. I am fluent in multiple languages which helps me create a cross-cultural environment. My experience spans 
+            four continents and five countries, bringing valuable global insights to any roles.
           </p>
         </div>
 
@@ -104,36 +104,3 @@ export default function GlobalExperience() {
             ))}
           </div>
         </div>
-
-        {/* Regional Experience Section */}
-        <div>
-          <h3 className="text-2xl font-bold text-slate-800 mb-8 text-center">Regional Experience</h3>
-          <div className="grid lg:grid-cols-3 gap-8">
-            {globalExperience.map((region, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border-l-4 border-blue-600"
-              >
-                <div className="flex items-center mb-6">
-                  <span className="text-4xl mr-4">{region.flag}</span>
-                  <h4 className="text-2xl font-bold text-slate-800">{region.region}</h4>
-                </div>
-                
-                <div className="mb-4">
-                  <h5 className="font-semibold text-slate-700 mb-2">Countries:</h5>
-                  <p className="text-slate-600">{region.countries.join(", ")}</p>
-                </div>
-                
-                <div className="mb-4">
-                  <h5 className="font-semibold text-slate-700 mb-2">Experience:</h5>
-                  <p className="text-slate-600 mb-2">{region.description}</p>
-                  <p className="text-sm text-slate-500">{region.experience}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}

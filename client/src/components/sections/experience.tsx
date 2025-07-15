@@ -28,8 +28,8 @@ export default function Experience() {
     {
       title: "Production Coordinator / Production Supervisor",
       company: "Walt Disney Animation Studios",
-      period: "May 2022 - Present",
-      description: "Coordinated characters, technical animation, and effects departments. Successfully delivered all new characters for Moana 2 (2024) with a newly hired team of 30 artists. Helped build Vancouver studio culture and onboarded new team members."
+      period: "May 2022 - June 2025",
+      description: "Started as a Production Coordinator with a team of 30, expected to reach 400 by the end of 2023. I coordinated every department except Lighting during my 3 years in the company. Gathered a vast understanding of the animation process and the importance of each department from shorts, feature films and content for the themed parks. Was temporarily promoted to Production Supervisor in 2023 to wrap characters on Moana 2. "
     },
     {
       title: "Virtual Production Coordinator",
@@ -38,7 +38,7 @@ export default function Experience() {
       description: "Helped incorporate Virtual Production into the new Scanline VFX pipeline after Netflix acquisition. Facilitated interdepartmental conversations and strategized solutions for evolving technology."
     },
     {
-      title: "Capture Assistant Producer",
+      title: "Capture Production Assistant/ Assistant Producer",
       company: "Electronic Arts",
       period: "Sep 2019 - Dec 2021",
       description: "Coordinated Motion Capture acquisition for FIFA, NHL, MADDEN, UFC, Dragon Age. Worked directly with animation directors and facilitated communication between departments."

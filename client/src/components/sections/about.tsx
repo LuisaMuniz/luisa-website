@@ -8,7 +8,7 @@ export default function About() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">About Me</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            I was born in Chile, my parents are Brazilian and Portuguese. When I turned 18 I moved to Canada to study film. After many opportunities and living in the UK for a year I am moving away from film. I am passionate about giving structure to teams to make life easier for everybody. No task is too small for me and I love to keep a fun light environment at work.
+            Born in Chile from are Brazilian and Portuguese parents. As soon as I could I moved to Canada to study film. After many job opportunities in Canada and the EU am moving away from film. I am passionate about giving structure to teams and will do what it takes to get the job done. No task is too small for me and I love to keep a fun light environment at work.
           </p>
         </div>
         
@@ -18,10 +18,10 @@ export default function About() {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold text-slate-800 mb-4">Professional Journey</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  With over 5 years of experience in entertainment production coordination, I've worked at top-tier 
+                  With over 5 years of production experience the entretainment industry I have decided to take a step back. I've worked at top-tier 
                   companies including Walt Disney Animation Studios, Netflix (ScanlineVFX), and Electronic Arts. 
                   I've successfully managed complex workflows, coordinated cross-functional teams, and delivered 
-                  award-winning content including Moana 2 and other major productions.
+                  award-winning content including Moana 2 and other major productions. I have experience working with many teams developing new technologies and pipelines. From animation to motion capture to virtual production. I can see how my skills can be applied to a project manager or Chief of Staff role where I can make a real impact from small startups to large companies.
                 </p>
               </CardContent>
             </Card>
@@ -30,7 +30,7 @@ export default function About() {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold text-slate-800 mb-4">What Drives Me</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  I thrive on building studio culture and facilitating interdepartmental communication. 
+                  I thrive on building company culture and facilitating communication. 
                   My focus on new technologies and ability to adapt to evolving pipelines makes me an ideal 
                   candidate for strategic leadership roles where innovation meets operational excellence.
                 </p>
