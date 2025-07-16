@@ -145,7 +145,7 @@ export default function Interests() {
               <p className="text-lg opacity-90 mb-6">
                 My diverse interests aren't just hobbies—they're sources of inspiration that inform my professional approach. 
                 From the precision of spreadsheet, to the creativity of cooking and my passion of exploring the world, they all contributes to my 
-                ability to think logically and bring fresh global perspectives to any workplace.
+                ability to think logically and bring fresh global perspectives to any workplace. And I love playing UNO!
               </p>
               <div className="flex flex-wrap gap-4">
                 <Badge variant="secondary" className="bg-white bg-opacity-20 text-white">
