@@ -4,7 +4,7 @@ import { BookOpen, ChefHat, Globe, BarChart3, Languages } from "lucide-react";
 import culinaryImage from "@assets/culinary-adventures.jpg";
 import exploringWorldImage from "@assets/exploring-world.jpg";
 import iceCreamLunchImage from "@assets/ice-cream-lunch.jpg";
-import hobbiesBackgroundImage from "@assets/hobbies-background-final.jpg";
+import hobbiesBackgroundImage from "@assets/hobbies-no-people.jpg";
 
 export default function Interests() {
   const interests = [
