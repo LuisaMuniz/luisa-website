@@ -20,6 +20,12 @@ export default function Timeline() {
       company: "Electronic Arts",
       period: "Sep 2019 - Dec 2021",
       description: "Coordinated Motion Capture acquisition for FIFA, NHL, MADDEN, UFC, Dragon Age. Worked directly with animation directors and facilitated communication between departments."
+    },
+    {
+      title: "Intern",
+      company: "Disney+ 🇨🇦",
+      period: "June 2019",
+      description: "Had the opportunity to intern for a Disney+ film right after university. This was one of their first projects going straight to Disney+. I could bounce around many departments and learn first hand what a day on set looks like."
     }
   ];
 
@@ -39,6 +45,62 @@ export default function Timeline() {
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-200"></div>
             
             {experiences.map((exp, index) => (
+              <div key={index} className="relative flex items-start mb-12">
+                {/* Timeline dot */}
+                <div className="absolute left-6 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
+                
+                {/* Content */}
+                <div className="ml-16 flex-1">
+                  <Card className="hover:shadow-xl transition-shadow duration-300">
+                    <CardContent className="p-8">
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                          <h3 className="text-xl font-semibold text-slate-800 mb-1">{exp.title}</h3>
+                          <p className="text-blue-600 font-medium">{exp.company}</p>
+                        </div>
+                        <Badge variant="outline" className="mt-2 md:mt-0 self-start">
+                          {exp.period}
+                        </Badge>
+                      </div>
+                      <p className="text-slate-600 leading-relaxed">{exp.description}</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function WorkExperience() {
+  const workExperiences = [
+    {
+      title: "Work Experience",
+      company: "AG FILMS 🇵🇹",
+      period: "June 2018",
+      description: "Work experience in Lisbon. Had the opportunity to work with a Portuguese production company and gain international film industry experience."
+    }
+  ];
+
+  return (
+    <section id="work-experience" className="section-padding bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">Work Experience</h2>
+          <p className="text-xl text-slate-600">
+            Early career experiences that shaped my professional foundation
+          </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-200"></div>
+            
+            {workExperiences.map((exp, index) => (
               <div key={index} className="relative flex items-start mb-12">
                 {/* Timeline dot */}
                 <div className="absolute left-6 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
