@@ -3,7 +3,7 @@ import Hero from "@/components/sections/hero";
 import About from "@/components/sections/about";
 import Education from "@/components/sections/education";
 import Experience from "@/components/sections/experience";
-import Timeline, { WorkExperience } from "@/components/sections/timeline";
+import Timeline from "@/components/sections/timeline";
 import Writing from "@/components/sections/portfolio";
 import GlobalExperience from "@/components/sections/global-experience";
 import Interests from "@/components/sections/interests";
@@ -18,7 +18,6 @@ export default function Home() {
       <About />
       <Education />
       <Timeline />
-      <WorkExperience />
       <Writing />
       <Experience />
       <GlobalExperience />
