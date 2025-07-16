@@ -70,8 +70,9 @@ export default function Contact() {
           <p className="text-xl text-slate-600">How I can contribute as your next Chief of Staff/Project Manager </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="space-y-8">
+        <div className="space-y-12">
+          {/* First Row - 2 Cards */}
+          <div className="grid md:grid-cols-2 gap-8">
             <Card>
               <CardHeader>
                 <CardTitle className="text-2xl font-semibold text-slate-800">Why Chief of Staff/Project Manager?</CardTitle>
@@ -112,6 +113,7 @@ export default function Contact() {
             </Card>
           </div>
 
+          {/* Second Row - Contact Form */}
           <Card>
             <CardHeader>
               <CardTitle className="text-2xl font-semibold text-slate-800">Send a Message</CardTitle>
