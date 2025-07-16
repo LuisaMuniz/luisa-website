@@ -23,7 +23,7 @@ export default function Hero() {
           Luisa Muniz
         </h1>
         <div className="mb-8 animate-fade-in-delay">
-          <h2 className="text-2xl md:text-3xl font-bold text-orange-400 mb-4 tracking-wide">
+          <h2 className="text-2xl md:text-3xl font-bold text-emerald-300 mb-4 tracking-wide">
             Aspiring Chief of Staff/Project Manager
           </h2>
           <p className="text-xl md:text-2xl font-light text-blue-100">
