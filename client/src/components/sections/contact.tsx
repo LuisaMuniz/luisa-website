@@ -65,14 +65,14 @@ export default function Contact() {
   return (
     <section id="contact" className="section-padding bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">Let's Connect</h2>
-          <p className="text-xl text-slate-600">How I can contribute as your next Chief of Staff/Project Manager </p>
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-6xl font-bold text-blue-600 mb-6">Let's Connect</h2>
+          <p className="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto">How I can contribute as your next Chief of Staff/Project Manager</p>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-16">
           {/* First Row - 2 Cards */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-12">
             <Card>
               <CardHeader>
                 <CardTitle className="text-2xl font-semibold text-slate-800">Why Chief of Staff/Project Manager?</CardTitle>
@@ -114,7 +114,8 @@ export default function Contact() {
           </div>
 
           {/* Second Row - Contact Form */}
-          <Card>
+          <div className="max-w-4xl mx-auto">
+            <Card>
             <CardHeader>
               <CardTitle className="text-2xl font-semibold text-slate-800">Send a Message</CardTitle>
             </CardHeader>
@@ -176,6 +177,7 @@ export default function Contact() {
               </form>
             </CardContent>
           </Card>
+          </div>
         </div>
       </div>
     </section>
