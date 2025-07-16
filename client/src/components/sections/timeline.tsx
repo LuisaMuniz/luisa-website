@@ -5,19 +5,19 @@ export default function Timeline() {
   const experiences = [
     {
       title: "Production Coordinator / Production Supervisor",
-      company: "Walt Disney Animation Studios",
+      company: "Walt Disney Animation Studios 🇨🇦",
       period: "May 2022 - June 2025",
       description: "Started as a Production Coordinator with a team of 30, expected to reach 400 by the end of 2023. I coordinated every department except Lighting during my 3 years in the company. Gathered a vast understanding of the animation process and the importance of each department from shorts, feature films and content for the themed parks. Was temporarily promoted to Production Supervisor in 2023 to wrap characters on Moana 2."
     },
     {
       title: "Virtual Production Coordinator",
-      company: "ScanlineVFX (Netflix)",
+      company: "ScanlineVFX (Netflix) 🇨🇦",
       period: "Dec 2021 - Mar 2022",
       description: "Helped incorporate Virtual Production into the new Scanline VFX pipeline after Netflix acquisition. Facilitated interdepartmental conversations and strategized solutions for evolving technology."
     },
     {
       title: "Capture Production Assistant/ Assistant Producer",
-      company: "Electronic Arts",
+      company: "Electronic Arts 🇨🇦",
       period: "Sep 2019 - Dec 2021",
       description: "Coordinated Motion Capture acquisition for FIFA, NHL, MADDEN, UFC, Dragon Age. Worked directly with animation directors and facilitated communication between departments."
     },
