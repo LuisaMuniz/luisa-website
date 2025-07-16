@@ -1,8 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 export default function Timeline() {
-  const experiences = [
+  const [showMore, setShowMore] = useState(false);
+  
+  const mainExperiences = [
     {
       title: "Production Coordinator / Production Supervisor",
       company: "Walt Disney Animation Studios 🇨🇦",
@@ -20,7 +24,10 @@ export default function Timeline() {
       company: "Electronic Arts 🇨🇦",
       period: "Sep 2019 - Dec 2021",
       description: "Coordinated Motion Capture acquisition for FIFA, NHL, MADDEN, UFC, Dragon Age. Worked directly with animation directors and facilitated communication between departments."
-    },
+    }
+  ];
+
+  const additionalExperiences = [
     {
       title: "Intern",
       company: "Disney+ 🇨🇦",
@@ -41,6 +48,8 @@ export default function Timeline() {
     }
   ];
 
+  const allExperiences = [...mainExperiences, ...(showMore ? additionalExperiences : [])];
+
   return (
     <section id="timeline" className="section-padding bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,8 +65,8 @@ export default function Timeline() {
             {/* Timeline line */}
             <div className="absolute left-8 top-0 w-0.5 bg-blue-200" style={{height: `calc(100% - 3rem)`}}></div>
             
-            {experiences.map((exp, index) => (
-              <div key={index} className={`relative flex items-start ${index === experiences.length - 1 ? 'mb-0' : 'mb-12'}`}>
+            {allExperiences.map((exp, index) => (
+              <div key={index} className={`relative flex items-start ${index === allExperiences.length - 1 ? 'mb-0' : 'mb-12'}`}>
                 {/* Timeline dot */}
                 <div className="absolute left-6 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
                 
@@ -80,6 +89,26 @@ export default function Timeline() {
                 </div>
               </div>
             ))}
+            
+            {/* Read more button */}
+            <div className="flex justify-center mt-8">
+              <button
+                onClick={() => setShowMore(!showMore)}
+                className="flex items-center gap-2 px-6 py-3 bg-blue-50 hover:bg-blue-100 text-blue-600 rounded-lg transition-colors duration-200 font-medium"
+              >
+                {showMore ? (
+                  <>
+                    <ChevronUp className="w-4 h-4" />
+                    Show less
+                  </>
+                ) : (
+                  <>
+                    <ChevronDown className="w-4 h-4" />
+                    Read more...
+                  </>
+                )}
+              </button>
+            </div>
           </div>
         </div>
       </div>
