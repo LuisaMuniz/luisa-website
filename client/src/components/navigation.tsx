@@ -17,6 +17,7 @@ const navItems = [
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState("home");
   const [isOpen, setIsOpen] = useState(false);
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -96,25 +97,38 @@ export default function Navigation() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
-                <div className="flex flex-col space-y-6 mt-8">
+                <div className="flex flex-col space-y-2 mt-8">
                   {["About me", "Career", "Interests", "Contact me"].map((category) => (
                     <div key={category}>
-                      <h3 className="text-lg font-semibold text-slate-700 mb-3">{category}</h3>
-                      <div className="space-y-2 ml-4">
-                        {navItems.filter(item => item.category === category).map((item) => (
-                          <button
-                            key={item.href}
-                            onClick={() => scrollToSection(item.href)}
-                            className={`block w-full text-left px-4 py-2 transition-colors ${
-                              activeSection === item.href.substring(1)
-                                ? "text-blue-600"
-                                : "text-slate-600 hover:text-blue-600"
-                            }`}
-                          >
-                            {item.label}
-                          </button>
-                        ))}
-                      </div>
+                      <button
+                        onClick={() => {
+                          if (expandedCategory === category) {
+                            setExpandedCategory(null);
+                          } else {
+                            setExpandedCategory(category);
+                          }
+                        }}
+                        className="w-full text-left px-4 py-3 text-lg font-semibold text-slate-700 hover:text-blue-600 transition-colors border-b border-slate-200"
+                      >
+                        {category}
+                      </button>
+                      {expandedCategory === category && (
+                        <div className="space-y-1 ml-4 mt-2 mb-4">
+                          {navItems.filter(item => item.category === category).map((item) => (
+                            <button
+                              key={item.href}
+                              onClick={() => scrollToSection(item.href)}
+                              className={`block w-full text-left px-4 py-2 transition-colors ${
+                                activeSection === item.href.substring(1)
+                                  ? "text-blue-600 bg-blue-50"
+                                  : "text-slate-600 hover:text-blue-600 hover:bg-slate-50"
+                              }`}
+                            >
+                              {item.label}
+                            </button>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>
