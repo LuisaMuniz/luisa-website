@@ -52,9 +52,9 @@ export default function Timeline() {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="relative">
+          <div className="relative pb-8">
             {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-200"></div>
+            <div className="absolute left-8 top-0 h-full w-0.5 bg-blue-200"></div>
             
             {experiences.map((exp, index) => (
               <div key={index} className="relative flex items-start mb-12">
