@@ -1,9 +1,9 @@
 export default function GlobalExperience() {
   const languages = [
     { name: "English", level: "Native", emoji: "🇨🇦🇺🇸", color: "bg-blue-100 text-blue-800" },
-    { name: "Portuguese", level: "Native", emoji: "🇧🇷🇵🇹", color: "bg-green-100 text-green-800" },
-    { name: "Spanish", level: "Native", emoji: "🇨🇱🇪🇸", color: "bg-yellow-100 text-yellow-800" },
-    { name: "Italian", level: "Conversational", emoji: "🇮🇹", color: "bg-red-100 text-red-800" }
+    { name: "Portuguese", level: "Native", emoji: "🇧🇷🇵🇹", color: "bg-slate-100 text-slate-800" },
+    { name: "Spanish", level: "Native", emoji: "🇨🇱🇪🇸", color: "bg-amber-100 text-amber-800" },
+    { name: "Italian", level: "Conversational", emoji: "🇮🇹", color: "bg-gray-100 text-gray-800" }
   ];
 
 
