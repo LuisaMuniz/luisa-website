@@ -45,34 +45,34 @@ export default function GlobalExperience() {
 
         {/* Languages Section */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-slate-800 mb-8 text-center">Language Proficiency</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <h3 className="text-2xl font-bold text-slate-800 mb-8 text-center">Languages I Speak</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {languages.map((language, index) => (
               <div 
                 key={index}
-                className="bg-slate-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
+                className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-6 text-center hover:shadow-xl hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-blue-200"
               >
-                <div className="flex justify-center items-center mb-4">
+                <div className="flex justify-center items-center mb-4 animate-bounce">
                   {language.flags.map((flag, flagIndex) => (
                     <span 
                       key={flagIndex}
-                      className="text-4xl mx-1"
+                      className="text-5xl mx-1 hover:scale-110 transition-transform duration-200"
                     >
                       {flag}
                     </span>
                   ))}
                 </div>
-                <h4 className="text-xl font-semibold text-slate-800 mb-2">
+                <h4 className="text-xl font-bold text-slate-800 mb-2">
                   {language.name}
                 </h4>
-                <p className="text-blue-600 font-medium mb-3">
+                <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold mb-3 inline-block">
                   {language.level}
-                </p>
+                </div>
                 <div className="space-y-1">
                   {language.countries.map((country, countryIndex) => (
                     <span 
                       key={countryIndex}
-                      className="inline-block text-sm text-slate-600 px-2 py-1 bg-white rounded-full mr-1"
+                      className="inline-block text-xs text-slate-600 px-3 py-1 bg-white rounded-full mr-1 shadow-sm border border-slate-200"
                     >
                       {country}
                     </span>
