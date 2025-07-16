@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
-import { Check, Mail, Phone, MapPin } from "lucide-react";
+import { Check, Mail, MapPin } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
 
 export default function Contact() {
@@ -98,10 +98,7 @@ export default function Contact() {
                     <Mail className="w-5 h-5 text-blue-600" />
                     <span className="text-slate-600">lmunizsimas@gmail.com</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <Phone className="w-5 h-5 text-blue-600" />
-                    <span className="text-slate-600">+1 (778) 389-4702</span>
-                  </div>
+
                   <div className="flex items-center space-x-3">
                     <FaLinkedin className="w-5 h-5 text-blue-600" />
                     <span className="text-slate-600">linkedin.com/in/luisa-muniz</span>
