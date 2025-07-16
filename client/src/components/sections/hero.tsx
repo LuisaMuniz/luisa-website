@@ -22,11 +22,14 @@ export default function Hero() {
         <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-white">
           Luisa Muniz
         </h1>
-        <p className="text-xl md:text-2xl mb-8 font-light animate-fade-in-delay text-blue-100">
-          Aspiring Chief of Staff/Project Manager
-          <br />
-          Transforming vision into reality through strategic execution.
-        </p>
+        <div className="mb-8 animate-fade-in-delay">
+          <div className="inline-block bg-gradient-to-r from-blue-400 to-cyan-400 text-white px-6 py-3 rounded-full text-lg md:text-xl font-semibold shadow-lg mb-4 transform hover:scale-105 transition-all">
+            Aspiring Chief of Staff/Project Manager
+          </div>
+          <p className="text-xl md:text-2xl font-light text-blue-100">
+            Transforming vision into reality through strategic execution.
+          </p>
+        </div>
         <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90 animate-fade-in-delay-long">
           Looking to change industries to a dynamic environment. Expert in workflow management, scheduling, and resource allocation. Love taking on new challenges and will do what it takes to get the job done. I am curious, reliable and proactive. If you need someone like me on your team, let's chat!
         </p>
