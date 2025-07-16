@@ -8,22 +8,30 @@ export default function Footer() {
     }
   };
 
-  const quickLinks = [
-    { href: "#about", label: "About Me" },
-    { href: "#education", label: "Education" },
-    { href: "#experience", label: "Experience & Skills" },
-    { href: "#timeline", label: "Professional Timeline" },
-    { href: "#writing", label: "Projects" },
-    { href: "#global-experience", label: "Global Experience and Languages" },
-    { href: "#interests", label: "Personal Interests" },
-    { href: "#contact", label: "Let's Connect" },
-  ];
+  const linkCategories = {
+    "About me": [
+      { href: "#about", label: "About Me" },
+      { href: "#education", label: "Education" },
+    ],
+    "Career": [
+      { href: "#timeline", label: "Professional Timeline" },
+      { href: "#writing", label: "Projects" },
+      { href: "#experience", label: "Experience & Skills" },
+    ],
+    "Interests": [
+      { href: "#global-experience", label: "Global Experience and Languages" },
+      { href: "#interests", label: "Personal Interests" },
+    ],
+    "Contact me": [
+      { href: "#contact", label: "Let's Connect" },
+    ],
+  };
 
   return (
     <footer className="bg-slate-800 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div>
+        <div className="grid md:grid-cols-6 gap-8">
+          <div className="md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">Luisa Muniz</h3>
             <p className="text-slate-400">
               Aspiring Chief of Staff/Project Manager <br />
@@ -31,20 +39,22 @@ export default function Footer() {
             </p>
           </div>
           
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <div className="space-y-2">
-              {quickLinks.map((link) => (
-                <button
-                  key={link.href}
-                  onClick={() => scrollToSection(link.href)}
-                  className="block text-slate-400 hover:text-white transition-colors text-left"
-                >
-                  {link.label}
-                </button>
-              ))}
+          {Object.entries(linkCategories).map(([category, links]) => (
+            <div key={category}>
+              <h4 className="text-lg font-semibold mb-4 text-emerald-300">{category}</h4>
+              <div className="space-y-2">
+                {links.map((link) => (
+                  <button
+                    key={link.href}
+                    onClick={() => scrollToSection(link.href)}
+                    className="block text-slate-400 hover:text-white transition-colors text-left"
+                  >
+                    {link.label}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
+          ))}
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect</h4>

@@ -4,14 +4,14 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
 const navItems = [
-  { href: "#about", label: "About Me" },
-  { href: "#education", label: "Education" },
-  { href: "#timeline", label: "Professional Timeline" },
-  { href: "#writing", label: "Projects" },
-  { href: "#experience", label: "Experience & Skills" },
-  { href: "#global-experience", label: "Global Experience and Languages" },
-  { href: "#interests", label: "Personal Interests" },
-  { href: "#contact", label: "Let's Connect" },
+  { href: "#about", label: "About Me", category: "About me" },
+  { href: "#education", label: "Education", category: "About Me" },
+  { href: "#timeline", label: "Professional Timeline", category: "Career" },
+  { href: "#writing", label: "Projects", category: "Career" },
+  { href: "#experience", label: "Experience & Skills", category: "Career" },
+  { href: "#global-experience", label: "Global Experience and Languages", category: "Interests" },
+  { href: "#interests", label: "Personal Interests", category: "Interests" },
+  { href: "#contact", label: "Let's Connect", category: "Contact me" },
 ];
 
 export default function Navigation() {
@@ -52,18 +52,29 @@ export default function Navigation() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.href}
-                onClick={() => scrollToSection(item.href)}
-                className={`transition-colors ${
-                  activeSection === item.href.substring(1)
-                    ? "text-blue-600"
-                    : "text-slate-600 hover:text-blue-600"
-                }`}
-              >
-                {item.label}
-              </button>
+            {["About me", "Career", "Interests", "Contact me"].map((category) => (
+              <div key={category} className="relative group">
+                <button className="text-slate-600 hover:text-blue-600 transition-colors font-medium">
+                  {category}
+                </button>
+                <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="py-2">
+                    {navItems.filter(item => item.category === category).map((item) => (
+                      <button
+                        key={item.href}
+                        onClick={() => scrollToSection(item.href)}
+                        className={`block w-full text-left px-4 py-2 transition-colors ${
+                          activeSection === item.href.substring(1)
+                            ? "text-blue-600 bg-blue-50"
+                            : "text-slate-600 hover:text-blue-600 hover:bg-slate-50"
+                        }`}
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
 
@@ -76,19 +87,26 @@ export default function Navigation() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
-                <div className="flex flex-col space-y-4 mt-8">
-                  {navItems.map((item) => (
-                    <button
-                      key={item.href}
-                      onClick={() => scrollToSection(item.href)}
-                      className={`text-left px-4 py-2 transition-colors ${
-                        activeSection === item.href.substring(1)
-                          ? "text-blue-600"
-                          : "text-slate-600 hover:text-blue-600"
-                      }`}
-                    >
-                      {item.label}
-                    </button>
+                <div className="flex flex-col space-y-6 mt-8">
+                  {["About me", "Career", "Interests", "Contact me"].map((category) => (
+                    <div key={category}>
+                      <h3 className="text-lg font-semibold text-emerald-600 mb-3">{category}</h3>
+                      <div className="space-y-2 ml-4">
+                        {navItems.filter(item => item.category === category).map((item) => (
+                          <button
+                            key={item.href}
+                            onClick={() => scrollToSection(item.href)}
+                            className={`block w-full text-left px-4 py-2 transition-colors ${
+                              activeSection === item.href.substring(1)
+                                ? "text-blue-600"
+                                : "text-slate-600 hover:text-blue-600"
+                            }`}
+                          >
+                            {item.label}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
                   ))}
                 </div>
               </SheetContent>
