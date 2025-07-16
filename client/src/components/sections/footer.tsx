@@ -75,7 +75,28 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-slate-700 mt-8 pt-8 text-center text-slate-400">
+        {/* Simplified Navigation Bar */}
+        <div className="border-t border-slate-700 mt-8 pt-6">
+          <div className="flex flex-wrap justify-center gap-8 mb-6">
+            {["About me", "Career", "Interests", "Contact me"].map((category) => (
+              <button
+                key={category}
+                onClick={() => {
+                  // Find the first section in this category and scroll to it
+                  const firstSection = linkCategories[category]?.[0];
+                  if (firstSection) {
+                    scrollToSection(firstSection.href);
+                  }
+                }}
+                className="text-slate-400 hover:text-white transition-colors font-medium"
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+        
+        <div className="border-t border-slate-700 mt-6 pt-6 text-center text-slate-400">
           <p>&copy; 2025 Luisa Muniz. All rights reserved.</p>
         </div>
       </div>
