@@ -45,38 +45,28 @@ export default function GlobalExperience() {
 
         {/* Languages Section */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-slate-800 mb-8 text-center">Languages I Speak</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h3 className="text-2xl font-bold text-slate-800 mb-8 text-center">Languages I Speak 🗣️</h3>
+          <div className="flex flex-wrap justify-center gap-4">
             {languages.map((language, index) => (
               <div 
                 key={index}
-                className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-6 text-center hover:shadow-xl hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-blue-200"
+                className="bg-white rounded-full px-6 py-4 shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 border-2 border-blue-100 hover:border-blue-300"
               >
-                <div className="flex justify-center items-center mb-4 animate-bounce">
-                  {language.flags.map((flag, flagIndex) => (
-                    <span 
-                      key={flagIndex}
-                      className="text-5xl mx-1 hover:scale-110 transition-transform duration-200"
-                    >
-                      {flag}
-                    </span>
-                  ))}
-                </div>
-                <h4 className="text-xl font-bold text-slate-800 mb-2">
-                  {language.name}
-                </h4>
-                <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold mb-3 inline-block">
-                  {language.level}
-                </div>
-                <div className="space-y-1">
-                  {language.countries.map((country, countryIndex) => (
-                    <span 
-                      key={countryIndex}
-                      className="inline-block text-xs text-slate-600 px-3 py-1 bg-white rounded-full mr-1 shadow-sm border border-slate-200"
-                    >
-                      {country}
-                    </span>
-                  ))}
+                <div className="flex items-center gap-3">
+                  <div className="flex">
+                    {language.flags.map((flag, flagIndex) => (
+                      <span 
+                        key={flagIndex}
+                        className="text-2xl"
+                      >
+                        {flag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="text-center">
+                    <div className="font-bold text-slate-800 text-sm">{language.name}</div>
+                    <div className="text-xs text-blue-600">{language.level}</div>
+                  </div>
                 </div>
               </div>
             ))}
