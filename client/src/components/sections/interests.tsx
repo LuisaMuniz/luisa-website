@@ -4,6 +4,7 @@ import { BookOpen, ChefHat, Globe, BarChart3, Languages } from "lucide-react";
 import culinaryImage from "@assets/culinary-adventures.jpg";
 import exploringWorldImage from "@assets/exploring-world.jpg";
 import iceCreamLunchImage from "@assets/ice-cream-lunch.jpg";
+import hobbiesBackgroundImage from "@assets/hobbies-background-final.jpg";
 
 export default function Interests() {
   const interests = [
@@ -112,8 +113,8 @@ export default function Interests() {
             </div>
             <div className="text-center">
               <img 
-                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" 
-                alt="Inspiring mountain lake travel destination" 
+                src={hobbiesBackgroundImage} 
+                alt="Personal interests and hobbies background" 
                 className="rounded-lg shadow-xl w-full h-auto"
               />
             </div>
