@@ -5,7 +5,7 @@ import culinaryImage from "@assets/culinary-adventures.jpg";
 import exploringWorldImage from "@assets/exploring-world.jpg";
 import iceCreamLunchImage from "@assets/ice-cream-lunch.jpg";
 import hobbiesBackgroundImage from "@assets/PHOTO-2025-07-16-14-35-03_1752673108735.jpg";
-import iceCreamLogo from "@assets/you did it!_1752676236786.png";
+import iceCreamLogo from "@assets/you did it!_1752676353198.png";
 
 export default function Interests() {
   const interests = [
@@ -58,7 +58,15 @@ export default function Interests() {
                 className="bg-gradient-to-br from-slate-100 to-slate-200 hover:shadow-xl transition-all duration-300 group hover:scale-105"
               >
                 <CardContent className="p-8 text-center">
-                  <Icon className={`w-12 h-12 mx-auto mb-4 ${interest.color}`} />
+                  {interest.logo ? (
+                    <img 
+                      src={interest.logo} 
+                      alt={interest.title}
+                      className="w-16 h-16 mx-auto mb-4 object-contain"
+                    />
+                  ) : (
+                    <Icon className={`w-12 h-12 mx-auto mb-4 ${interest.color}`} />
+                  )}
                   <h3 className="text-xl font-semibold text-slate-800 mb-3">{interest.title}</h3>
                   <p className="text-slate-600 mb-4">{interest.description}</p>
                   {interest.link && (
