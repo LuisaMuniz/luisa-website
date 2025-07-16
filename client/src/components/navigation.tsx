@@ -53,28 +53,19 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {["About me", "Career", "Interests", "Contact me"].map((category) => (
-              <div key={category} className="relative group">
-                <button className="text-slate-600 hover:text-blue-600 transition-colors font-medium">
-                  {category}
-                </button>
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <div className="py-2">
-                    {navItems.filter(item => item.category === category).map((item) => (
-                      <button
-                        key={item.href}
-                        onClick={() => scrollToSection(item.href)}
-                        className={`block w-full text-left px-4 py-2 transition-colors ${
-                          activeSection === item.href.substring(1)
-                            ? "text-blue-600 bg-blue-50"
-                            : "text-slate-600 hover:text-blue-600 hover:bg-slate-50"
-                        }`}
-                      >
-                        {item.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              <button
+                key={category}
+                onClick={() => {
+                  // Find the first section in this category and scroll to it
+                  const firstSection = navItems.find(item => item.category === category);
+                  if (firstSection) {
+                    scrollToSection(firstSection.href);
+                  }
+                }}
+                className="text-slate-600 hover:text-blue-600 transition-colors font-medium"
+              >
+                {category}
+              </button>
             ))}
           </div>
 
@@ -87,26 +78,21 @@ export default function Navigation() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
-                <div className="flex flex-col space-y-6 mt-8">
+                <div className="flex flex-col space-y-4 mt-8">
                   {["About me", "Career", "Interests", "Contact me"].map((category) => (
-                    <div key={category}>
-                      <h3 className="text-lg font-semibold text-slate-700 mb-3">{category}</h3>
-                      <div className="space-y-2 ml-4">
-                        {navItems.filter(item => item.category === category).map((item) => (
-                          <button
-                            key={item.href}
-                            onClick={() => scrollToSection(item.href)}
-                            className={`block w-full text-left px-4 py-2 transition-colors ${
-                              activeSection === item.href.substring(1)
-                                ? "text-blue-600"
-                                : "text-slate-600 hover:text-blue-600"
-                            }`}
-                          >
-                            {item.label}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
+                    <button
+                      key={category}
+                      onClick={() => {
+                        // Find the first section in this category and scroll to it
+                        const firstSection = navItems.find(item => item.category === category);
+                        if (firstSection) {
+                          scrollToSection(firstSection.href);
+                        }
+                      }}
+                      className="text-left px-4 py-2 text-slate-600 hover:text-blue-600 transition-colors font-medium"
+                    >
+                      {category}
+                    </button>
                   ))}
                 </div>
               </SheetContent>
