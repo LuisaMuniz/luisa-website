@@ -68,7 +68,7 @@ export default function Timeline() {
               style={{
                 height: showMore 
                   ? `calc(100% - 10rem)` 
-                  : `calc(100% - 6rem)`
+                  : `calc(100% - 8rem)`
               }}
             ></div>
             
