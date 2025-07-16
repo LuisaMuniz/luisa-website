@@ -63,7 +63,14 @@ export default function Timeline() {
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-8 top-0 w-0.5 bg-blue-200" style={{height: `calc(100% - 3rem)`}}></div>
+            <div 
+              className="absolute left-8 top-0 w-0.5 bg-blue-200" 
+              style={{
+                height: showMore 
+                  ? `calc(100% - 6rem)` 
+                  : `calc(100% - 9rem)`
+              }}
+            ></div>
             
             {allExperiences.map((exp, index) => (
               <div key={index} className={`relative flex items-start ${index === allExperiences.length - 1 ? 'mb-0' : 'mb-12'}`}>
