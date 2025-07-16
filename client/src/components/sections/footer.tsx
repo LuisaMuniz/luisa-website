@@ -9,10 +9,14 @@ export default function Footer() {
   };
 
   const quickLinks = [
-    { href: "#about", label: "About" },
-    { href: "#experience", label: "Experience" },
-    { href: "#writing", label: "Writing" },
-    { href: "#interests", label: "Interests" },
+    { href: "#about", label: "About Me" },
+    { href: "#education", label: "Education" },
+    { href: "#experience", label: "Experience & Skills" },
+    { href: "#timeline", label: "Professional Timeline" },
+    { href: "#writing", label: "Projects" },
+    { href: "#global-experience", label: "Global Experience and Languages" },
+    { href: "#interests", label: "Personal Interests" },
+    { href: "#contact", label: "Let's Connect" },
   ];
 
   return (
