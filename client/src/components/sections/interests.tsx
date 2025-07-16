@@ -74,12 +74,50 @@ export default function Interests() {
                       className="w-full h-32 object-cover rounded-lg mt-4 group-hover:scale-105 transition-transform duration-300"
                     />
                   )}
-                  {interest.title === "Data Enthusiast" && (
+                  {interest.title === "Ice Cream for Lunch" && (
                     <div className="bg-white p-4 rounded-lg mt-4 text-left">
-                      <div className="text-sm font-mono text-slate-600 space-y-1">
-                        <div>📊 Excel Expert</div>
-                        <div>📈 Data Visualization</div>
-                        <div>🔍 Advanced Analytics</div>
+                      <div className="text-sm text-slate-700 mb-2 font-medium">Some of my favourite posts:</div>
+                      <div className="space-y-2">
+                        <div>
+                          <a 
+                            href="https://icecreamforlunch.substack.com/p/how-food-changed-the-way-i-travel?r=17e9cb" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:text-blue-800 text-sm hover:underline"
+                          >
+                            How food changed the way I travel
+                          </a>
+                        </div>
+                        <div>
+                          <a 
+                            href="https://icecreamforlunch.substack.com/p/the-art-of-appreciating-food-you?r=17e9cb" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:text-blue-800 text-sm hover:underline"
+                          >
+                            The art of appreciating food you don't like
+                          </a>
+                        </div>
+                        <div>
+                          <a 
+                            href="https://icecreamforlunch.substack.com/p/why-i-quit-my-dream-job?r=17e9cb" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:text-blue-800 text-sm hover:underline"
+                          >
+                            Why I quit my dream job
+                          </a>
+                        </div>
+                        <div>
+                          <a 
+                            href="https://open.substack.com/pub/icecreamforlunch/p/who-bakes-better-cookies-me-or-gpt?r=17e9cb&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:text-blue-800 text-sm hover:underline"
+                          >
+                            Who bakes better cookies: me or chatGPT?
+                          </a>
+                        </div>
                       </div>
                     </div>
                   )}
