@@ -74,7 +74,7 @@ export default function Contact() {
           <div className="space-y-8">
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl font-semibold text-slate-800">Why Project Management/Chief of Staff?</CardTitle>
+                <CardTitle className="text-2xl font-semibold text-slate-800">Why Chief of Staff/Project Manager?</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
