@@ -30,8 +30,8 @@ export default function Footer() {
   return (
     <footer className="bg-slate-800 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-6 gap-8">
-          <div className="md:col-span-2">
+        <div className="grid md:grid-cols-3 gap-8">
+          <div>
             <h3 className="text-2xl font-bold mb-4">Luisa Muniz</h3>
             <p className="text-slate-400">
               Aspiring Chief of Staff/Project Manager <br />
@@ -39,22 +39,26 @@ export default function Footer() {
             </p>
           </div>
           
-          {Object.entries(linkCategories).map(([category, links]) => (
-            <div key={category}>
-              <h4 className="text-lg font-semibold mb-4 text-slate-300">{category}</h4>
-              <div className="space-y-2">
-                {links.map((link) => (
-                  <button
-                    key={link.href}
-                    onClick={() => scrollToSection(link.href)}
-                    className="block text-slate-400 hover:text-white transition-colors text-left"
-                  >
-                    {link.label}
-                  </button>
-                ))}
-              </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Quick Navigation</h4>
+            <div className="flex flex-wrap gap-4">
+              {["About me", "Career", "Interests", "Contact me"].map((category) => (
+                <button
+                  key={category}
+                  onClick={() => {
+                    // Find the first section in this category and scroll to it
+                    const firstSection = linkCategories[category]?.[0];
+                    if (firstSection) {
+                      scrollToSection(firstSection.href);
+                    }
+                  }}
+                  className="text-slate-400 hover:text-white transition-colors font-medium"
+                >
+                  {category}
+                </button>
+              ))}
             </div>
-          ))}
+          </div>
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
@@ -72,27 +76,6 @@ export default function Footer() {
                 <FaBlog className="w-6 h-6" />
               </a>
             </div>
-          </div>
-        </div>
-        
-        {/* Simplified Navigation Bar */}
-        <div className="border-t border-slate-700 mt-8 pt-6">
-          <div className="flex flex-wrap justify-center gap-8 mb-6">
-            {["About me", "Career", "Interests", "Contact me"].map((category) => (
-              <button
-                key={category}
-                onClick={() => {
-                  // Find the first section in this category and scroll to it
-                  const firstSection = linkCategories[category]?.[0];
-                  if (firstSection) {
-                    scrollToSection(firstSection.href);
-                  }
-                }}
-                className="text-slate-400 hover:text-white transition-colors font-medium"
-              >
-                {category}
-              </button>
-            ))}
           </div>
         </div>
         
