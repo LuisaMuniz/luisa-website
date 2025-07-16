@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub, FaEnvelope, FaBlog } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   const scrollToSection = (href: string) => {
@@ -43,7 +43,7 @@ export default function Footer() {
             <h4 className="text-sm font-bold mb-3 text-slate-400">Quick Navigation</h4>
             <div className="flex flex-col space-y-2">
               {["About me", "Career", "Interests", "Contact me"].map((category) => (
-                <button
+                <span
                   key={category}
                   onClick={() => {
                     // Find the first section in this category and scroll to it
@@ -52,10 +52,10 @@ export default function Footer() {
                       scrollToSection(firstSection.href);
                     }
                   }}
-                  className="text-slate-400 hover:text-slate-200 transition-colors text-sm text-left"
+                  className="text-slate-400 hover:text-slate-200 transition-colors text-sm cursor-pointer"
                 >
                   {category}
-                </button>
+                </span>
               ))}
             </div>
           </div>
@@ -71,9 +71,6 @@ export default function Footer() {
               </a>
               <a href="mailto:lmunizsimas@gmail.com" className="text-slate-400 hover:text-white transition-colors">
                 <FaEnvelope className="w-6 h-6" />
-              </a>
-              <a href="https://substack.com/@icecreamforlunch" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
-                <FaBlog className="w-6 h-6" />
               </a>
             </div>
           </div>
