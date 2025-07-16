@@ -37,7 +37,7 @@ export default function Timeline() {
       title: "Work Experience",
       company: "ZigZag Productions 🇬🇧",
       period: "January 2018",
-      description: "My first experience in a production company. I transcribed raw footage from different languages and run small errands throughout my stay. I was then refered to another production company (Faction Films) where I intered for 2 more weeks in the Spring."
+      description: "My first experience in a production company. I transcribed raw footage from different languages and run small errands throughout my stay. I was then refered to another production company (Faction Films) where I interned for 2 more weeks in the Spring."
     }
   ];
 
