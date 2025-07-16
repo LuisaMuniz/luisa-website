@@ -50,7 +50,7 @@ export default function Timeline() {
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                         <div>
                           <h3 className="text-xl font-semibold text-slate-800 mb-1">{exp.title}</h3>
-                          <p className="text-teal-600 font-medium">{exp.company}</p>
+                          <p className="text-blue-600 font-medium">{exp.company}</p>
                         </div>
                         <Badge variant="outline" className="mt-2 md:mt-0 self-start">
                           {exp.period}

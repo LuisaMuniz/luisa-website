@@ -15,7 +15,7 @@ export default function Education() {
           <Card className="hover:shadow-xl transition-shadow duration-300">
             <CardContent className="p-8">
               <h3 className="text-xl font-semibold text-slate-800 mb-2">Bachelor's Degree in Motion Picture Arts</h3>
-              <p className="text-teal-600 font-medium mb-4">Capilano University • Vancouver, Canada</p>
+              <p className="text-blue-600 font-medium mb-4">Capilano University • Vancouver, Canada</p>
               <p className="text-slate-600">
                 Comprehensive program covering all aspects of motion picture production, from pre-production 
                 planning to post-production workflows. Gained hands-on experience with industry-standard 
@@ -27,7 +27,7 @@ export default function Education() {
           <Card className="hover:shadow-xl transition-shadow duration-300">
             <CardContent className="p-8">
               <h3 className="text-xl font-semibold text-slate-800 mb-2">International Exchange Program</h3>
-              <p className="text-teal-600 font-medium mb-4">University of Hertfordshire • Hatfield, England</p>
+              <p className="text-blue-600 font-medium mb-4">University of Hertfordshire • Hatfield, England</p>
               <p className="text-slate-600">
                 Expanded global perspective through international study experience. Gained exposure to 
                 different production methodologies and built a valuable international network. Gained work experience in London and Lisbon interning in a total of 4 production companies.
