@@ -67,7 +67,7 @@ export default function Timeline() {
               className="absolute left-8 top-0 w-0.5 bg-blue-200" 
               style={{
                 height: showMore 
-                  ? `calc(100% - 18rem)` 
+                  ? `calc(100% - 24rem)` 
                   : `calc(100% - 8rem)`
               }}
             ></div>
