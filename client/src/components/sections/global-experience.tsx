@@ -1,8 +1,8 @@
 export default function GlobalExperience() {
   const languages = [
-    { name: "English", level: "Native/Fluent", countries: ["Canada", "United States"], flags: ["🇨🇦", "🇺🇸"], color: "border-red-300 hover:border-red-500" },
+    { name: "English", level: "Native/Fluent", countries: ["Canada", "United States"], flags: ["🇨🇦"], color: "border-red-300 hover:border-red-500" },
     { name: "Portuguese", level: "Native/Fluent", countries: ["Brazil", "Portugal"], flags: ["🇧🇷", "🇵🇹"], color: "border-blue-300 hover:border-blue-500" },
-    { name: "Spanish", level: "Native/Fluent", countries: ["Chile", "Latin America"], flags: ["🇨🇱", "🇪🇸"], color: "border-yellow-300 hover:border-yellow-500" },
+    { name: "Spanish", level: "Native/Fluent", countries: ["Chile", "Latin America"], flags: ["🇨🇱"], color: "border-yellow-300 hover:border-yellow-500" },
     { name: "Italian", level: "Conversational", countries: ["Italy", "Europe"], flags: ["🇮🇹"], color: "border-green-300 hover:border-green-500" }
   ];
 
@@ -22,23 +22,35 @@ export default function GlobalExperience() {
         </div>
 
         {/* Experience Summary */}
-        <div className="mb-16 bg-blue-50 rounded-xl p-8">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-blue-600 mb-2">5+</div>
-              <p className="text-slate-600">Countries Lived/Worked</p>
+        <div className="mb-12 bg-slate-50 rounded-xl p-6">
+          <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex items-center gap-3 bg-white rounded-full px-4 py-2 shadow-sm">
+              <span className="text-2xl">🗺️</span>
+              <div>
+                <div className="text-xl font-bold text-blue-600">5+</div>
+                <div className="text-xs text-slate-600">Countries</div>
+              </div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600 mb-2">4</div>
-              <p className="text-slate-600">Languages Spoken</p>
+            <div className="flex items-center gap-3 bg-white rounded-full px-4 py-2 shadow-sm">
+              <span className="text-2xl">💬</span>
+              <div>
+                <div className="text-xl font-bold text-blue-600">4</div>
+                <div className="text-xs text-slate-600">Languages</div>
+              </div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600 mb-2">3</div>
-              <p className="text-slate-600">Continents Experience</p>
+            <div className="flex items-center gap-3 bg-white rounded-full px-4 py-2 shadow-sm">
+              <span className="text-2xl">🌍</span>
+              <div>
+                <div className="text-xl font-bold text-blue-600">3</div>
+                <div className="text-xs text-slate-600">Continents</div>
+              </div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600 mb-2">10+</div>
-              <p className="text-slate-600">Years International</p>
+            <div className="flex items-center gap-3 bg-white rounded-full px-4 py-2 shadow-sm">
+              <span className="text-2xl">⏰</span>
+              <div>
+                <div className="text-xl font-bold text-blue-600">10+</div>
+                <div className="text-xs text-slate-600">Years</div>
+              </div>
             </div>
           </div>
         </div>
