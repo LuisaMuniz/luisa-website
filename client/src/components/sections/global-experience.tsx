@@ -1,9 +1,9 @@
 export default function GlobalExperience() {
   const languages = [
-    { name: "English", level: "Native/Fluent", countries: ["Canada", "United States"], flags: ["🇨🇦", "🇺🇸"] },
-    { name: "Portuguese", level: "Native/Fluent", countries: ["Brazil", "Portugal"], flags: ["🇧🇷", "🇵🇹"] },
-    { name: "Spanish", level: "Native/Fluent", countries: ["Chile", "Latin America"], flags: ["🇨🇱", "🇪🇸"] },
-    { name: "Italian", level: "Conversational", countries: ["Italy", "Europe"], flags: ["🇮🇹"] }
+    { name: "English", level: "Native/Fluent", countries: ["Canada", "United States"], flags: ["🇨🇦", "🇺🇸"], color: "border-red-300 hover:border-red-500" },
+    { name: "Portuguese", level: "Native/Fluent", countries: ["Brazil", "Portugal"], flags: ["🇧🇷", "🇵🇹"], color: "border-blue-300 hover:border-blue-500" },
+    { name: "Spanish", level: "Native/Fluent", countries: ["Chile", "Latin America"], flags: ["🇨🇱", "🇪🇸"], color: "border-yellow-300 hover:border-yellow-500" },
+    { name: "Italian", level: "Conversational", countries: ["Italy", "Europe"], flags: ["🇮🇹"], color: "border-green-300 hover:border-green-500" }
   ];
 
 
@@ -50,7 +50,7 @@ export default function GlobalExperience() {
             {languages.map((language, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-full px-6 py-4 shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 border-2 border-blue-100 hover:border-blue-300"
+                className={`bg-white rounded-full px-6 py-4 shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 border-2 ${language.color}`}
               >
                 <div className="flex items-center gap-3">
                   <div className="flex">
