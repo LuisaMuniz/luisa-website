@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="text-sm font-medium mb-3 text-slate-500">Quick Navigation</h4>
+            <h4 className="text-sm font-bold mb-3 text-slate-500">Quick Navigation</h4>
             <div className="flex flex-col space-y-2">
               {["About me", "Career", "Interests", "Contact me"].map((category) => (
                 <button
