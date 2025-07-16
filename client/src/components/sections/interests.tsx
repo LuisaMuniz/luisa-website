@@ -24,7 +24,7 @@ export default function Interests() {
       title: "Culinary Adventures",
       description: "I love going on culinary adventures and exploring flavors from around the world or even taking cooking classes at home.",
       image: culinaryImage,
-      color: "text-blue-900"
+      color: "text-red-600"
     },
     {
       icon: Globe,
