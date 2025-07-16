@@ -40,8 +40,8 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Navigation</h4>
-            <div className="flex flex-wrap gap-4">
+            <h4 className="text-sm font-medium mb-3 text-slate-500">Quick Navigation</h4>
+            <div className="flex flex-col space-y-2">
               {["About me", "Career", "Interests", "Contact me"].map((category) => (
                 <button
                   key={category}
@@ -52,7 +52,7 @@ export default function Footer() {
                       scrollToSection(firstSection.href);
                     }
                   }}
-                  className="text-slate-400 hover:text-white transition-colors font-medium"
+                  className="text-slate-500 hover:text-slate-300 transition-colors text-sm text-left"
                 >
                   {category}
                 </button>
