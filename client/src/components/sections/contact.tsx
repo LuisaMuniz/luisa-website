@@ -90,31 +90,8 @@ export default function Contact() {
             </Card>
           </div>
 
-          {/* Second Row - Get In Touch and Send Message */}
-          <div className="grid lg:grid-cols-2 gap-12">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-2xl font-semibold text-slate-800">Get In Touch</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <Mail className="w-5 h-5 text-blue-600" />
-                    <span className="text-slate-600">lmunizsimas@gmail.com</span>
-                  </div>
-
-                  <div className="flex items-center space-x-3">
-                    <FaLinkedin className="w-5 h-5 text-blue-600" />
-                    <span className="text-slate-600">linkedin.com/in/luisa-muniz</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-blue-600" />
-                    <span className="text-slate-600">Canada (Remote)</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
+          {/* Second Row - Send Message */}
+          <div className="max-w-4xl mx-auto">
             <Card>
             <CardHeader>
               <CardTitle className="text-2xl font-semibold text-slate-800">Send a Message</CardTitle>
