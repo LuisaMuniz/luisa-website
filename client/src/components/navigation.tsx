@@ -90,7 +90,7 @@ export default function Navigation() {
                 <div className="flex flex-col space-y-6 mt-8">
                   {["About me", "Career", "Interests", "Contact me"].map((category) => (
                     <div key={category}>
-                      <h3 className="text-lg font-semibold text-emerald-600 mb-3">{category}</h3>
+                      <h3 className="text-lg font-semibold text-slate-700 mb-3">{category}</h3>
                       <div className="space-y-2 ml-4">
                         {navItems.filter(item => item.category === category).map((item) => (
                           <button

@@ -41,7 +41,7 @@ export default function Footer() {
           
           {Object.entries(linkCategories).map(([category, links]) => (
             <div key={category}>
-              <h4 className="text-lg font-semibold mb-4 text-emerald-300">{category}</h4>
+              <h4 className="text-lg font-semibold mb-4 text-slate-300">{category}</h4>
               <div className="space-y-2">
                 {links.map((link) => (
                   <button
