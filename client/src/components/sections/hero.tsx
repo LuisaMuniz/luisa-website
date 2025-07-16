@@ -23,9 +23,9 @@ export default function Hero() {
           Luisa Muniz
         </h1>
         <div className="mb-8 animate-fade-in-delay">
-          <div className="inline-block bg-gradient-to-r from-blue-400 to-cyan-400 text-white px-6 py-3 rounded-full text-lg md:text-xl font-semibold shadow-lg mb-4 transform hover:scale-105 transition-all">
+          <h2 className="text-2xl md:text-3xl font-bold text-cyan-300 mb-4 tracking-wide">
             Aspiring Chief of Staff/Project Manager
-          </div>
+          </h2>
           <p className="text-xl md:text-2xl font-light text-blue-100">
             Transforming vision into reality through strategic execution.
           </p>
