@@ -19,7 +19,7 @@ export default function Hero() {
       }}
     >
       <div className="text-center text-white px-4">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-white">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-white mt-16">
           Luisa Muniz
         </h1>
         <div className="mb-8 animate-fade-in-delay">
