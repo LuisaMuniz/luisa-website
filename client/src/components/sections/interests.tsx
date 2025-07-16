@@ -7,7 +7,7 @@ export default function Interests() {
     {
       icon: BookOpen,
       title: "Ice Cream for Lunch",
-      description: "My personal blog where I share thoughts, experiences, and insights about life and work.",
+      description: "This is personal blog where I share thoughts, experiences, and insights about life, travel and food.",
       link: "Read Blog →",
       color: "text-blue-600",
       linkUrl: "https://substack.com/@icecreamforlunch"
@@ -15,21 +15,21 @@ export default function Interests() {
     {
       icon: ChefHat,
       title: "Culinary Adventures",
-      description: "Going on culinary adventures and exploring flavors from around the world.",
+      description: "I love going on culinary adventures and exploring flavors from around the world or even taking cooking classes at home.",
       image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=200",
       color: "text-yellow-600"
     },
     {
       icon: Globe,
       title: "Exploring the World",
-      description: "Discovering new places, cultures, and perspectives from around the globe.",
+      description: "Given my family is spread around the world, I grew up with what my Dad calls 'wheels' on my feet. I love exploring new places. I am currently travelling the world for 2 years while working remotely.",
       image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=200",
       color: "text-green-600"
     },
     {
       icon: BarChart3,
       title: "Building Spreadsheets",
-      description: "Creating organized systems and finding beauty in well-structured data and spreadsheets.",
+      description: "I not only build spreadsheets for work, they rule my life. From organizing christmas to the office trivia nights, spreadsheets bring structure to my thinking and make communication easier for my family and colleagues",
       color: "text-purple-600"
     }
   ];
@@ -88,11 +88,11 @@ export default function Interests() {
         <div className="mt-16 bg-gradient-to-r from-blue-600 to-slate-700 rounded-xl p-8 text-white">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-3xl font-bold mb-4">Why These Interests Matter</h3>
+              <h3 className="text-3xl font-bold mb-4">Why My Hobbies Matter</h3>
               <p className="text-lg opacity-90 mb-6">
                 My diverse interests aren't just hobbies—they're sources of inspiration that inform my professional approach. 
-                From the precision of spreadsheet optimization to the creativity of cooking, each passion contributes to my 
-                ability to think holistically and bring fresh perspectives to complex business challenges.
+                From the precision of spreadsheet, to the creativity of cooking and my passion of exploring the world, they all contributes to my 
+                ability to think logically and bring fresh global perspectives to any workplace.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Badge variant="secondary" className="bg-white bg-opacity-20 text-white">

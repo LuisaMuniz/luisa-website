@@ -22,7 +22,9 @@ export default function Hero() {
           Luisa Muniz
         </h1>
         <p className="text-xl md:text-2xl mb-8 font-light animate-fade-in-delay text-blue-100">
-          Project Management & Aspiring Chief of Staff
+          Aspiring Chief of Staff/Project Manager
+          <br />
+          Transforming vision into reality through strategic execution.
         </p>
         <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90 animate-fade-in-delay-long">
           Looking to change industries to a dynamic environment. Expert in workflow management, scheduling, and resource allocation. Love taking on new challenges and will do what it takes to get the job done. I am curious, reliable and proactive. If you need someone like me on your team, let's chat!

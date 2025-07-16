@@ -7,19 +7,19 @@ export default function Experience() {
     {
       icon: ProjectorIcon,
       title: "Project Management",
-      description: "Expert in workflow management, scheduling, and resource allocation",
+      description: "Expert in workflow management, scheduling, and resource allocation. I can create a plan and make sure its executed.",
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: Users,
       title: "Team Leadership",
-      description: "Cross-functional team management and stakeholder alignment",
+      description: "There is no task too small. I am happy to take the lead in projects making sure my teammates feel supported.",
       color: "from-teal-500 to-green-500"
     },
     {
       icon: TrendingUp,
       title: "Process Optimization",
-      description: "Data-driven decision making and operational efficiency improvements",
+      description: "Let's innovate! There are always ways we can improve our processes.",
       color: "from-indigo-500 to-blue-500"
     }
   ];

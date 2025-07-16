@@ -10,28 +10,28 @@ export default function Projects() {
   const projects = [
     {
       title: "Moana 2 (2024)",
-      description: "Successfully delivered all new characters for Disney's highly anticipated sequel with a newly hired team of 30 artists while learning the modern Disney animation pipeline.",
+      description: "Coordinated the character department from start to finish. Was able to join almost all departments to help complete the movie. This experience gave me indepth understanding of the animation pipeline.",
       image: moana2Image,
-      tags: ["Disney Animation", "Character Development", "Team Leadership"],
+      tags: ["Disney Animation", "Production Management", "Feature Film"],
       link: "https://www.imdb.com/title/tt13622970/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_moana%25202"
     },
     {
       title: "Unannounced Disney Project (2025)",
-      description: "Currently coordinating production for an upcoming Disney animated feature, managing complex workflows and interdepartmental communication.",
+      description: "Had the opportunity to jump into a very special short. This was a smaller scaled project so I had the opportunity to wear many hats. It was incredibly rewarding to learn so much in such a short amount of time.",
       image: disneyProjectGraphic,
-      tags: ["Disney Animation", "Production Management", "Confidential"]
+      tags: ["Disney Animation", "Production Management", "Short Film"]
     },
     {
       title: "EA Motion Capture (2019-2021)",
       description: "Organized and produced data recording sessions at EA for head scanning, motion capture, DCAM and performance capture. Supported major game titles including FIFA, NHL, UFC, Dragon Age, Madden, Sims, Skate and PGA.",
       image: eaLogoImage,
-      tags: ["EA Sports", "Motion Capture", "Data Production", "Gaming"]
+      tags: ["EA Sports", "Motion Capture", "Gaming"]
     },
     {
       title: "Mr. James is Dead (2020)",
       description: "Produced an independent short film in 8 weeks with all the challenging elements typically avoided in scripts: fake firearms, action choreography, and kids' schedules. An incredible rushed challenge that provided extensive learning opportunities.",
       image: mrJamesImage,
-      tags: ["Independent Film", "Producer", "Action", "Short Film"]
+      tags: ["Independent Film", "Producer", "Short Film"]
     },
     {
       title: "Flora and Ulysses (2020)",

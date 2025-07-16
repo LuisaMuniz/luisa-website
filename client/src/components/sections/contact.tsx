@@ -67,14 +67,14 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">Let's Connect</h2>
-          <p className="text-xl text-slate-600">Ready to discuss how I can contribute as your next Chief of Staff</p>
+          <p className="text-xl text-slate-600">How I can contribute as your next Chief of Staff/Project Manager </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl font-semibold text-slate-800">Why Chief of Staff?</CardTitle>
+                <CardTitle className="text-2xl font-semibold text-slate-800">Why Project Management/Chief of Staff?</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -151,7 +151,7 @@ export default function Contact() {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    placeholder="Chief of Staff Opportunity"
+                    placeholder="Chief of Staff or Project Management Opportunity"
                     required
                   />
                 </div>

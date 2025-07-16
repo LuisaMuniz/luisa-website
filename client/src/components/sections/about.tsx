@@ -21,7 +21,7 @@ export default function About() {
                   With over 5 years of production experience the entretainment industry I have decided to take a step back. I've worked at top-tier 
                   companies including Walt Disney Animation Studios, Netflix (ScanlineVFX), and Electronic Arts. 
                   I've successfully managed complex workflows, coordinated cross-functional teams, and delivered 
-                  award-winning content including Moana 2 and other major productions. I have experience working with many teams developing new technologies and pipelines. From animation to motion capture to virtual production. I can see how my skills can be applied to a project manager or Chief of Staff role where I can make a real impact from small startups to large companies.
+                  award-winning content including Moana 2 and other major productions. I have experience working with many teams developing new technologies and pipelines. From animation to motion capture to virtual production. I can see how my skills can be applied to a Project Manager or Chief of Staff role where I can make a real impact from small startups to large companies.
                 </p>
               </CardContent>
             </Card>
@@ -32,7 +32,7 @@ export default function About() {
                 <p className="text-slate-600 leading-relaxed">
                   I thrive on building company culture and facilitating communication. 
                   My focus on new technologies and ability to adapt to evolving pipelines makes me an ideal 
-                  candidate for strategic leadership roles where innovation meets operational excellence.
+                  candidate for strategic leadership roles where innovation meets operational excellence. I love organizing, give me an idea and I will make it a feaseable plan that can be executed.
                 </p>
               </CardContent>
             </Card>
@@ -79,8 +79,7 @@ export default function About() {
                 <p className="text-teal-600 font-medium mb-4">University of Hertfordshire • Hatfield, England</p>
                 <p className="text-slate-600">
                   Expanded global perspective through international study experience. Gained exposure to 
-                  different production methodologies and built valuable international network while 
-                  studying in the UK film industry hub.
+                  different production methodologies and built a valuable international network. Gained work experience in London and Lisbon interning in a total of 4 production companies.
                 </p>
               </CardContent>
             </Card>
