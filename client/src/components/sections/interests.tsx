@@ -49,7 +49,7 @@ export default function Interests() {
           <p className="text-xl text-slate-600">The passions that fuel my creativity and drive</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {interests.map((interest, index) => {
             const Icon = interest.icon;
             return (
