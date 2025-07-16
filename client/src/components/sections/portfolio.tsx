@@ -88,7 +88,7 @@ export default function Projects() {
                     <Badge 
                       key={tagIndex} 
                       variant={tagIndex === 0 ? "default" : "secondary"}
-                      className={tagIndex === 0 ? "bg-blue-600" : "bg-teal-600"}
+                      className={tagIndex === 0 ? "bg-blue-600" : "bg-emerald-500 text-white"}
                     >
                       {tag}
                     </Badge>
