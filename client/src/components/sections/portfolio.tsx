@@ -61,14 +61,14 @@ export default function Projects() {
                     <img 
                       src={project.image} 
                       alt={project.title}
-                      className="w-full h-56 object-contain group-hover:scale-105 transition-all duration-300 hover:brightness-110 bg-gradient-to-br from-blue-50 to-purple-50"
+                      className="w-full h-56 object-contain group-hover:scale-105 transition-all duration-300 hover:brightness-110 bg-gradient-to-br from-blue-50 to-slate-50"
                     />
                   </a>
                 ) : (
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-56 object-contain group-hover:scale-105 transition-all duration-300 hover:brightness-110 bg-gradient-to-br from-blue-50 to-purple-50"
+                    className="w-full h-56 object-contain group-hover:scale-105 transition-all duration-300 hover:brightness-110 bg-gradient-to-br from-blue-50 to-slate-50"
                   />
                 )}
               </div>
@@ -88,7 +88,7 @@ export default function Projects() {
                     <Badge 
                       key={tagIndex} 
                       variant={tagIndex === 0 ? "default" : "secondary"}
-                      className={tagIndex === 0 ? "bg-purple-600" : "bg-orange-500"}
+                      className={tagIndex === 0 ? "bg-blue-600" : "bg-green-600"}
                     >
                       {tag}
                     </Badge>
