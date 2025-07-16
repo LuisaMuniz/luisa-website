@@ -5,6 +5,7 @@ import culinaryImage from "@assets/culinary-adventures.jpg";
 import exploringWorldImage from "@assets/exploring-world.jpg";
 import iceCreamLunchImage from "@assets/ice-cream-lunch.jpg";
 import hobbiesBackgroundImage from "@assets/PHOTO-2025-07-16-14-35-03_1752673108735.jpg";
+import iceCreamLogo from "@assets/you did it!_1752676236786.png";
 
 export default function Interests() {
   const interests = [
@@ -15,7 +16,8 @@ export default function Interests() {
       link: "Read Blog →",
       color: "text-blue-600",
       linkUrl: "https://substack.com/@icecreamforlunch",
-      image: iceCreamLunchImage
+      image: iceCreamLunchImage,
+      logo: iceCreamLogo
     },
     {
       icon: ChefHat,
@@ -67,13 +69,6 @@ export default function Interests() {
                       {interest.link}
                     </button>
                   )}
-                  {interest.image && (
-                    <img 
-                      src={interest.image} 
-                      alt={interest.title}
-                      className="w-full h-32 object-cover rounded-lg mt-4 group-hover:scale-105 transition-transform duration-300"
-                    />
-                  )}
                   {interest.title === "Ice Cream for Lunch" && (
                     <div className="bg-white p-4 rounded-lg mt-4 text-left">
                       <div className="text-sm text-slate-700 mb-2 font-medium">Some of my favourite posts:</div>
@@ -120,6 +115,13 @@ export default function Interests() {
                         </div>
                       </div>
                     </div>
+                  )}
+                  {interest.image && (
+                    <img 
+                      src={interest.image} 
+                      alt={interest.title}
+                      className="w-full h-32 object-cover rounded-lg mt-4 group-hover:scale-105 transition-transform duration-300"
+                    />
                   )}
                 </CardContent>
               </Card>
