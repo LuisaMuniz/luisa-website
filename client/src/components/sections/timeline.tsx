@@ -32,6 +32,12 @@ export default function Timeline() {
       company: "AG Films 🇵🇹",
       period: "June 2018",
       description: "Learned first hand all about running a production company in Lisbon as we organized and filmed a car commercial."
+    },
+    {
+      title: "Work Experience",
+      company: "ZigZag Productions 🇬🇧",
+      period: "January 2018",
+      description: "My first experience in a production company. I transcribed raw footage from different languages and run small errands throughout my stay. I was then refered to another production company (Faction Films) where I intered for 2 more weeks in the Spring."
     }
   ];
 
