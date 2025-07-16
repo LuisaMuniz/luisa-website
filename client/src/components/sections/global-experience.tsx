@@ -62,7 +62,7 @@ export default function GlobalExperience() {
             {languages.map((language, index) => (
               <div 
                 key={index}
-                className={`bg-white rounded-full px-6 py-4 shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 border-2 ${language.color}`}
+                className={`bg-white rounded-full px-6 py-4 shadow-lg border-2 ${language.color.replace('hover:border-', 'border-')}`}
               >
                 <div className="flex items-center gap-3">
                   <div className="flex">
