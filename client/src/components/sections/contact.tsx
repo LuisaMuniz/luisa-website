@@ -71,8 +71,8 @@ export default function Contact() {
         </div>
 
         <div className="space-y-16">
-          {/* First Row - 2 Cards */}
-          <div className="grid lg:grid-cols-2 gap-12">
+          {/* First Row - Why Chief of Staff/Project Manager */}
+          <div className="max-w-5xl mx-auto">
             <Card>
               <CardHeader>
                 <CardTitle className="text-2xl font-semibold text-slate-800">Why Chief of Staff/Project Manager?</CardTitle>
@@ -88,7 +88,10 @@ export default function Contact() {
                 </div>
               </CardContent>
             </Card>
+          </div>
 
+          {/* Second Row - Get In Touch and Send Message */}
+          <div className="grid lg:grid-cols-2 gap-12">
             <Card>
               <CardHeader>
                 <CardTitle className="text-2xl font-semibold text-slate-800">Get In Touch</CardTitle>
@@ -111,10 +114,7 @@ export default function Contact() {
                 </div>
               </CardContent>
             </Card>
-          </div>
 
-          {/* Second Row - Contact Form */}
-          <div className="max-w-4xl mx-auto">
             <Card>
             <CardHeader>
               <CardTitle className="text-2xl font-semibold text-slate-800">Send a Message</CardTitle>
@@ -163,7 +163,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    placeholder="Tell me about the opportunity..."
+                    placeholder="Tell me about the opportunity... or email me directly at lmunizsimas@gmail.com"
                     required
                   />
                 </div>
