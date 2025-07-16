@@ -26,6 +26,12 @@ export default function Timeline() {
       company: "Disney+ 🇨🇦",
       period: "June 2019",
       description: "Had the opportunity to intern for a Disney+ film right after university. This was one of their first projects going straight to Disney+. I could bounce around many departments and learn first hand what a day on set looks like."
+    },
+    {
+      title: "Work Experience",
+      company: "AG Films 🇵🇹",
+      period: "June 2018",
+      description: "Learned first hand all about running a production company in Lisbon as we organized and filmed a car commercial."
     }
   ];
 
