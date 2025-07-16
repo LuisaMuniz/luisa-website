@@ -4,12 +4,14 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
 const navItems = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
+  { href: "#about", label: "About Me" },
+  { href: "#education", label: "Education" },
+  { href: "#experience", label: "Experience & Skills" },
+  { href: "#timeline", label: "Professional Timeline" },
   { href: "#writing", label: "Projects" },
-  { href: "#interests", label: "Interests" },
-  { href: "#contact", label: "Contact" },
+  { href: "#global-experience", label: "Global Experience and Languages" },
+  { href: "#interests", label: "Personal Interests" },
+  { href: "#contact", label: "Let's Connect" },
 ];
 
 export default function Navigation() {

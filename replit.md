@@ -27,14 +27,17 @@ Design preferences: Clean, professional design with solid colors instead of grad
 ## Key Components
 
 ### Frontend Components
-1. **Navigation System**: Fixed header with smooth scrolling to sections
+1. **Navigation System**: Fixed header with smooth scrolling to sections - updated with custom tab names
 2. **Hero Section**: Landing area with call-to-action buttons
-3. **About Section**: Professional overview with cards
-4. **Experience Section**: Skills and work history display
-5. **Portfolio Section**: Project showcase with images and tags
-6. **Interests Section**: Personal interests and hobbies
-7. **Contact Section**: Form with validation and submission
-8. **Footer**: Quick links and social media connections
+3. **About Me Section**: Professional overview with cards (education moved to separate section)
+4. **Education Section**: Academic background and international experience
+5. **Experience & Skills Section**: Core competencies and skill overview
+6. **Professional Timeline Section**: Chronological career progression
+7. **Projects Section**: Project showcase with images and tags
+8. **Global Experience and Languages Section**: Language proficiency and international exposure
+9. **Personal Interests Section**: Personal interests and hobbies
+10. **Let's Connect Section**: Contact form with validation and submission
+11. **Footer**: Quick links and social media connections
 
 ### Backend Components
 1. **API Routes**: Contact form submission and retrieval endpoints

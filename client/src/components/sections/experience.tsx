@@ -24,26 +24,7 @@ export default function Experience() {
     }
   ];
 
-  const experiences = [
-    {
-      title: "Production Coordinator / Production Supervisor",
-      company: "Walt Disney Animation Studios",
-      period: "May 2022 - June 2025",
-      description: "Started as a Production Coordinator with a team of 30, expected to reach 400 by the end of 2023. I coordinated every department except Lighting during my 3 years in the company. Gathered a vast understanding of the animation process and the importance of each department from shorts, feature films and content for the themed parks. Was temporarily promoted to Production Supervisor in 2023 to wrap characters on Moana 2. "
-    },
-    {
-      title: "Virtual Production Coordinator",
-      company: "ScanlineVFX (Netflix)",
-      period: "Dec 2021 - Mar 2022",
-      description: "Helped incorporate Virtual Production into the new Scanline VFX pipeline after Netflix acquisition. Facilitated interdepartmental conversations and strategized solutions for evolving technology."
-    },
-    {
-      title: "Capture Production Assistant/ Assistant Producer",
-      company: "Electronic Arts",
-      period: "Sep 2019 - Dec 2021",
-      description: "Coordinated Motion Capture acquisition for FIFA, NHL, MADDEN, UFC, Dragon Age. Worked directly with animation directors and facilitated communication between departments."
-    }
-  ];
+
 
   return (
     <section id="experience" className="section-padding bg-white">
@@ -70,26 +51,7 @@ export default function Experience() {
           })}
         </div>
 
-        {/* Experience Timeline */}
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-3xl font-bold text-slate-800 mb-12 text-center">Professional Timeline</h3>
-          <div className="space-y-8">
-            {experiences.map((exp, index) => (
-              <Card key={index} className="bg-slate-50 hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-8">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                    <h4 className="text-xl font-semibold text-slate-800">{exp.title}</h4>
-                    <Badge variant="outline" className="text-blue-600 border-blue-600">
-                      {exp.period}
-                    </Badge>
-                  </div>
-                  <p className="text-slate-600 mb-3 font-medium">{exp.company}</p>
-                  <p className="text-slate-600">{exp.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+
       </div>
     </section>
   );
