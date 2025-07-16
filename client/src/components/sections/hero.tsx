@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import heroBackground from "@assets/hero-background.jpg";
 
 export default function Hero() {
   const scrollToSection = (href: string) => {
@@ -14,7 +15,7 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center parallax-bg"
       style={{
         backgroundImage: `linear-gradient(rgba(37, 99, 235, 0.8), rgba(30, 41, 59, 0.8)), 
-                         url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080')`
+                         url(${heroBackground})`
       }}
     >
       <div className="text-center text-white px-4">

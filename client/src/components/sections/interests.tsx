@@ -1,6 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BookOpen, ChefHat, Globe, BarChart3, Languages } from "lucide-react";
+import culinaryImage from "@assets/culinary-adventures.jpg";
+import exploringWorldImage from "@assets/exploring-world.jpg";
+import iceCreamLunchImage from "@assets/ice-cream-lunch.jpg";
 
 export default function Interests() {
   const interests = [
@@ -10,20 +13,21 @@ export default function Interests() {
       description: "This is personal blog where I share thoughts, experiences, and insights about life, travel and food.",
       link: "Read Blog →",
       color: "text-blue-600",
-      linkUrl: "https://substack.com/@icecreamforlunch"
+      linkUrl: "https://substack.com/@icecreamforlunch",
+      image: iceCreamLunchImage
     },
     {
       icon: ChefHat,
       title: "Culinary Adventures",
       description: "I love going on culinary adventures and exploring flavors from around the world or even taking cooking classes at home.",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=200",
+      image: culinaryImage,
       color: "text-yellow-600"
     },
     {
       icon: Globe,
       title: "Exploring the World",
       description: "Given my family is spread around the world, I grew up with what my Dad calls 'wheels' on my feet. I love exploring new places. I am currently travelling the world for 2 years while working remotely.",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=200",
+      image: exploringWorldImage,
       color: "text-green-600"
     },
     {
