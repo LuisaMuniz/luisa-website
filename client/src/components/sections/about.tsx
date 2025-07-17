@@ -8,7 +8,7 @@ export default function About() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">About Me</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Born in Chile from are Brazilian and Portuguese parents. As soon as I could I moved to Canada to study film. After many job opportunities in Canada and the EU am moving away from film. I am passionate about giving structure to teams and will do what it takes to get the job done. No task is too small for me and I love to keep a fun light environment at work.
+            I was born in Chile to Brazilian and Portuguese parents. I moved to Canada to study film as soon as I had the opportunity. After exploring various job opportunities in Canada and the EU, I have decided to shift my focus away from film. I am passionate about providing structure to teams and am dedicated to getting the job done, no matter how small the task. I also enjoy creating a fun and lighthearted work environment.
           </p>
         </div>
         
