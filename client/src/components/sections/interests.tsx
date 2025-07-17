@@ -127,11 +127,11 @@ export default function Interests() {
                   {interest.image && (
                     <div className="w-full mt-4">
                       {interest.title === "Culinary Adventures" ? (
-                        <div className="w-full h-96 rounded-lg overflow-hidden bg-white flex items-center justify-center">
+                        <div className="w-full h-[28rem] rounded-lg overflow-hidden bg-white flex items-center justify-center">
                           <img 
                             src={interest.image} 
                             alt={interest.title}
-                            className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
                       ) : (
