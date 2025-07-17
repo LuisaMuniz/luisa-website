@@ -56,11 +56,24 @@ export default function Timeline() {
   // Calculate line height to end exactly on the last dot (ZigZag Production when expanded)
   useEffect(() => {
     const calculateLineHeight = () => {
-      if (timelineRef.current && lastDotRef.current) {
-        const timelineRect = timelineRef.current.getBoundingClientRect();
-        const lastDotRect = lastDotRef.current.getBoundingClientRect();
-        const relativeTop = lastDotRect.top - timelineRect.top;
-        setLineHeight(relativeTop + 8); // 8px to center on the dot
+      if (timelineRef.current) {
+        if (showMore && lastDotRef.current) {
+          // When expanded, end at ZigZag Production dot
+          const timelineRect = timelineRef.current.getBoundingClientRect();
+          const lastDotRect = lastDotRef.current.getBoundingClientRect();
+          const relativeTop = lastDotRect.top - timelineRect.top;
+          setLineHeight(relativeTop + 8); // 8px to center on the dot
+        } else {
+          // When collapsed, end at the last visible experience + some padding for dots
+          const mainExperiences = timelineRef.current.querySelectorAll('.timeline-item');
+          if (mainExperiences.length >= 3) {
+            const lastMainExp = mainExperiences[2]; // EA experience (index 2)
+            const timelineRect = timelineRef.current.getBoundingClientRect();
+            const lastExpRect = lastMainExp.getBoundingClientRect();
+            const relativeTop = lastExpRect.top - timelineRect.top;
+            setLineHeight(relativeTop + 8); // 8px to center on the dot
+          }
+        }
       }
     };
 
@@ -95,7 +108,7 @@ export default function Timeline() {
               const isZigZag = exp.company === "ZigZag Productions 🇬🇧";
               
               return (
-                <div key={index} className={`relative flex items-start ${isLastExperience ? 'mb-0' : 'mb-12'}`}>
+                <div key={index} className={`relative flex items-start timeline-item ${isLastExperience ? 'mb-0' : 'mb-12'}`}>
                   {/* Timeline dot */}
                   <div 
                     ref={isZigZag ? lastDotRef : null}
@@ -122,6 +135,15 @@ export default function Timeline() {
                 </div>
               );
             })}
+            
+            {/* Three dots indicator when collapsed */}
+            {!showMore && (
+              <div className="absolute left-7 flex flex-col items-center space-y-1" style={{ top: `${lineHeight + 10}px` }}>
+                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+              </div>
+            )}
             
             {/* Read more button */}
             <div className="flex justify-center mt-8">
