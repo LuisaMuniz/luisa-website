@@ -4,6 +4,13 @@
 
 This is a modern, responsive CV/portfolio website built with React and Express. The application features a single-page design showcasing a professional's background, experience, and contact information. It includes a contact form with backend storage capabilities and is styled with Tailwind CSS using shadcn/ui components.
 
+## Recent Changes (July 17, 2025)
+- Fixed SendGrid email functionality with proper API key configuration and dotenv loading
+- Added comprehensive error logging for email delivery troubleshooting
+- Implemented admin page at `/admin/messages` for viewing contact form submissions
+- Enhanced email notifications with detailed delivery status logging
+- Added troubleshooting tips in server logs for email delivery issues
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
