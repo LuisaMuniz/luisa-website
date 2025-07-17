@@ -131,7 +131,7 @@ export default function Interests() {
                         alt={interest.title}
                         className={`rounded-lg group-hover:scale-105 transition-transform duration-300 ${
                           interest.title === "Culinary Adventures" 
-                            ? "w-full h-60 object-contain mx-auto" 
+                            ? "w-full h-80 object-contain mx-auto" 
                             : "w-full h-32 object-cover"
                         }`}
                       />
