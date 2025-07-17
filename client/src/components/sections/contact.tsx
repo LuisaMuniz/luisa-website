@@ -87,7 +87,7 @@ export default function Contact() {
           </div>
 
           {/* Second Row - Send Message */}
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <Card>
             <CardHeader>
               <CardTitle className="text-2xl font-semibold text-slate-800">
