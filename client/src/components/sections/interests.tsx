@@ -12,7 +12,7 @@ export default function Interests() {
     {
       icon: BookOpen,
       title: "Ice Cream for Lunch",
-      description: "This is personal blog where I share thoughts, experiences, and insights about life, travel and food.",
+      description: "This is a personal blog where I share thoughts, experiences, and insights about life, travel and food.",
       link: "Read Blog →",
       color: "text-blue-600",
       linkUrl: "https://substack.com/@icecreamforlunch",
@@ -22,7 +22,7 @@ export default function Interests() {
     {
       icon: ChefHat,
       title: "Culinary Adventures",
-      description: "I love going on culinary adventures and exploring flavors from around the world or even taking cooking classes at home.",
+      description: "I love going on culinary adventures and exploring flavours from around the world, or even taking cooking classes at home.",
       image: culinaryImage,
       color: "text-red-600"
     },
@@ -36,7 +36,7 @@ export default function Interests() {
     {
       icon: BarChart3,
       title: "Building Spreadsheets",
-      description: "I not only build spreadsheets for work, they rule my life. From organizing christmas to the office trivia nights, spreadsheets bring structure to my thinking and make communication easier for my family and colleagues",
+      description: "I not only build spreadsheets for work, but they also rule my life. From organizing Christmas to the office trivia nights, spreadsheets bring structure to my thinking and make communication easier for my family and colleagues.",
       color: "text-purple-600"
     }
   ];
