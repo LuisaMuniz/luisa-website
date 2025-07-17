@@ -125,15 +125,17 @@ export default function Interests() {
                     </div>
                   )}
                   {interest.image && (
-                    <img 
-                      src={interest.image} 
-                      alt={interest.title}
-                      className={`w-full rounded-lg mt-4 group-hover:scale-105 transition-transform duration-300 ${
-                        interest.title === "Culinary Adventures" 
-                          ? "h-40 object-contain mx-auto" 
-                          : "h-32 object-cover"
-                      }`}
-                    />
+                    <div className="w-full mt-4">
+                      <img 
+                        src={interest.image} 
+                        alt={interest.title}
+                        className={`w-full rounded-lg group-hover:scale-105 transition-transform duration-300 ${
+                          interest.title === "Culinary Adventures" 
+                            ? "h-40 object-contain" 
+                            : "h-32 object-cover"
+                        }`}
+                      />
+                    </div>
                   )}
                 </CardContent>
               </Card>
