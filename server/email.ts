@@ -22,10 +22,28 @@ export async function sendEmail(params: EmailParams): Promise<boolean> {
     
     const mailOptions: any = {
       to: params.to,
-      from: params.from,
+      from: {
+        email: params.from,
+        name: 'CV Website Contact Form'
+      },
       subject: params.subject,
       text: params.text,
       html: params.html,
+      // Add headers to improve delivery
+      headers: {
+        'X-Priority': '1',
+        'X-MSMail-Priority': 'High',
+        'Importance': 'high'
+      },
+      // Add tracking settings
+      trackingSettings: {
+        clickTracking: {
+          enable: false
+        },
+        openTracking: {
+          enable: false
+        }
+      }
     };
     
     if (params.replyTo) {

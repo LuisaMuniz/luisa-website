@@ -56,41 +56,85 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const emailSent = await sendEmail({
         to: 'lmunizsimas@gmail.com',
         from: 'lmunizsimas@gmail.com', // Using your verified sender email
-        subject: `New Contact Form Message: ${validatedData.subject}`,
+        subject: `🔔 New Contact Form Message: ${validatedData.subject}`,
         replyTo: validatedData.email, // Set reply-to to the form sender
         text: `
-New message from your website contact form:
+CV WEBSITE CONTACT FORM SUBMISSION
 
-Name: ${validatedData.name}
+From: ${validatedData.name}
 Email: ${validatedData.email}
 Subject: ${validatedData.subject}
+Date: ${new Date().toLocaleString()}
 
-Message:
+MESSAGE:
 ${validatedData.message}
 
 ---
 Reply directly to: ${validatedData.email}
+
+This message was sent from your CV website contact form.
         `,
         html: `
-<h2>New Contact Form Message</h2>
-<p><strong>Name:</strong> ${validatedData.name}</p>
-<p><strong>Email:</strong> ${validatedData.email}</p>
-<p><strong>Subject:</strong> ${validatedData.subject}</p>
-<h3>Message:</h3>
-<p>${validatedData.message.replace(/\n/g, '<br>')}</p>
-<hr>
-<p><em>Reply directly to: <a href="mailto:${validatedData.email}">${validatedData.email}</a></em></p>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; }
+        .header { background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .content { background-color: #ffffff; padding: 20px; border: 1px solid #dee2e6; border-radius: 8px; }
+        .meta { color: #6c757d; margin-bottom: 15px; }
+        .message { background-color: #f8f9fa; padding: 15px; border-left: 4px solid #007bff; margin: 20px 0; }
+        .footer { margin-top: 20px; padding-top: 20px; border-top: 1px solid #dee2e6; color: #6c757d; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 style="color: #007bff; margin: 0;">🔔 New Contact Form Message</h1>
+    </div>
+    
+    <div class="content">
+        <div class="meta">
+            <p><strong>Name:</strong> ${validatedData.name}</p>
+            <p><strong>Email:</strong> <a href="mailto:${validatedData.email}">${validatedData.email}</a></p>
+            <p><strong>Subject:</strong> ${validatedData.subject}</p>
+            <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
+        </div>
+        
+        <div class="message">
+            <h3>Message:</h3>
+            <p>${validatedData.message.replace(/\n/g, '<br>')}</p>
+        </div>
+        
+        <div class="footer">
+            <p>This message was sent from your CV website contact form.</p>
+            <p><strong>Reply directly to:</strong> <a href="mailto:${validatedData.email}">${validatedData.email}</a></p>
+        </div>
+    </div>
+</body>
+</html>
         `
       });
       
+      // Console notification for immediate visibility
+      console.log('\n🔔 NEW CONTACT FORM MESSAGE RECEIVED:');
+      console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+      console.log(`From: ${validatedData.name} (${validatedData.email})`);
+      console.log(`Subject: ${validatedData.subject}`);
+      console.log(`Time: ${new Date().toLocaleString()}`);
+      console.log('Message:');
+      console.log(validatedData.message);
+      console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+      console.log(`Admin URL: http://localhost:5000/admin/messages`);
+      console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
+
       if (emailSent) {
-        console.log('Email notification sent successfully');
+        console.log('✅ Email notification sent successfully to Gmail');
         console.log('⚠️  If you\'re not receiving emails, check:');
         console.log('   1. Your spam/junk folder');
         console.log('   2. Gmail\'s Promotions tab');
         console.log('   3. SendGrid account verification status');
       } else {
-        console.log('Email notification failed - message stored in database');
+        console.log('❌ Email notification failed - message stored in database');
       }
       
       res.json({ success: true, message: "Message sent successfully!" });
