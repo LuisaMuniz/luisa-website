@@ -1,10 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 export default function Timeline() {
   const [showMore, setShowMore] = useState(false);
+  const [lineHeight, setLineHeight] = useState(0);
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const lastDotRef = useRef<HTMLDivElement>(null);
   
   const mainExperiences = [
     {
@@ -50,6 +53,23 @@ export default function Timeline() {
 
   const allExperiences = [...mainExperiences, ...(showMore ? additionalExperiences : [])];
 
+  // Calculate line height to end exactly on the last dot (ZigZag Production when expanded)
+  useEffect(() => {
+    const calculateLineHeight = () => {
+      if (timelineRef.current && lastDotRef.current) {
+        const timelineRect = timelineRef.current.getBoundingClientRect();
+        const lastDotRect = lastDotRef.current.getBoundingClientRect();
+        const relativeTop = lastDotRect.top - timelineRect.top;
+        setLineHeight(relativeTop + 8); // 8px to center on the dot
+      }
+    };
+
+    calculateLineHeight();
+    window.addEventListener('resize', calculateLineHeight);
+    
+    return () => window.removeEventListener('resize', calculateLineHeight);
+  }, [showMore]);
+
   return (
     <section id="timeline" className="section-padding bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,41 +81,47 @@ export default function Timeline() {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="relative">
+          <div className="relative" ref={timelineRef}>
             {/* Timeline line */}
             <div 
               className="absolute left-8 top-0 w-0.5 bg-blue-200" 
               style={{
-                height: showMore 
-                  ? `calc(100% - 22rem)` 
-                  : `calc(100% - 8rem)`
+                height: lineHeight > 0 ? `${lineHeight}px` : '0px'
               }}
             ></div>
             
-            {allExperiences.map((exp, index) => (
-              <div key={index} className={`relative flex items-start ${index === allExperiences.length - 1 ? 'mb-0' : 'mb-12'}`}>
-                {/* Timeline dot */}
-                <div className="absolute left-6 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
+            {allExperiences.map((exp, index) => {
+              const isLastExperience = index === allExperiences.length - 1;
+              const isZigZag = exp.company === "ZigZag Productions 🇬🇧";
+              
+              return (
+                <div key={index} className={`relative flex items-start ${isLastExperience ? 'mb-0' : 'mb-12'}`}>
+                  {/* Timeline dot */}
+                  <div 
+                    ref={isZigZag ? lastDotRef : null}
+                    className="absolute left-6 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"
+                  ></div>
                 
-                {/* Content */}
-                <div className="ml-16 flex-1">
-                  <Card className="hover:shadow-xl transition-shadow duration-300">
-                    <CardContent className="p-8">
-                      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                        <div>
-                          <h3 className="text-xl font-semibold text-slate-800 mb-1">{exp.title}</h3>
-                          <p className="text-blue-600 font-medium">{exp.company}</p>
+                  {/* Content */}
+                  <div className="ml-16 flex-1">
+                    <Card className="hover:shadow-xl transition-shadow duration-300">
+                      <CardContent className="p-8">
+                        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                          <div>
+                            <h3 className="text-xl font-semibold text-slate-800 mb-1">{exp.title}</h3>
+                            <p className="text-blue-600 font-medium">{exp.company}</p>
+                          </div>
+                          <Badge variant="outline" className="mt-2 md:mt-0 self-start">
+                            {exp.period}
+                          </Badge>
                         </div>
-                        <Badge variant="outline" className="mt-2 md:mt-0 self-start">
-                          {exp.period}
-                        </Badge>
-                      </div>
-                      <p className="text-slate-600 leading-relaxed">{exp.description}</p>
-                    </CardContent>
-                  </Card>
+                        <p className="text-slate-600 leading-relaxed">{exp.description}</p>
+                      </CardContent>
+                    </Card>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
             
             {/* Read more button */}
             <div className="flex justify-center mt-8">
