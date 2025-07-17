@@ -31,8 +31,8 @@ export default function About() {
                 <h3 className="text-2xl font-semibold text-slate-800 mb-4">What Drives Me</h3>
                 <p className="text-slate-600 leading-relaxed">
                   I thrive on building company culture and facilitating communication. 
-                  My focus on new technologies and ability to adapt to evolving pipelines makes me an ideal 
-                  candidate for strategic leadership roles where innovation meets operational excellence. I love organizing, give me an idea and I will make it a feaseable plan that can be executed.
+                  My focus on new technologies and ability to adapt to evolving pipelines make me an ideal 
+                  candidate for strategic leadership roles where innovation meets operational excellence. I love organizing, give me an idea and I will make it a feasible plan that can be executed.
                 </p>
               </CardContent>
             </Card>
