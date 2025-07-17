@@ -18,10 +18,10 @@ export default function About() {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold text-slate-800 mb-4">Professional Journey</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  With over 5 years of production experience the entretainment industry I have decided to take a step back. I've worked at top-tier 
+                  With over 5 years of production experience in the entertainment industry, I have decided to take a step back. I've worked at top-tier 
                   companies including Walt Disney Animation Studios, Netflix (ScanlineVFX), and Electronic Arts. 
                   I've successfully managed complex workflows, coordinated cross-functional teams, and delivered 
-                  award-winning content including Moana 2 and other major productions. I have experience working with many teams developing new technologies and pipelines. From animation to motion capture to virtual production. I can see how my skills can be applied to a Project Manager or Chief of Staff role where I can make a real impact from small startups to large companies.
+                  award-winning content, including Moana 2 and other major productions. I have experience working with many teams developing new technologies and pipelines. From animation to motion capture to virtual production. I can see how my skills can be applied to a Project Manager or Chief of Staff role, where I can make a real impact from small startups to large companies.
                 </p>
               </CardContent>
             </Card>

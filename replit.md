@@ -10,6 +10,11 @@ This is a modern, responsive CV/portfolio website built with React and Express. 
 - Implemented admin page at `/admin/messages` for viewing contact form submissions
 - Enhanced email notifications with detailed delivery status logging
 - Added troubleshooting tips in server logs for email delivery issues
+- Updated contact form to show "Thank you for sending me a message!" after submission with field clearing
+- Improved culinary adventures image sizing and formatting in interests section
+- Updated social media meta tags for proper link sharing (Luisa Muniz, luisamunizsm.com)
+- Created "LM" favicon with equal letter sizing for browser tabs
+- Grammar and text corrections in About Me section for professional presentation
 
 ## User Preferences
 
