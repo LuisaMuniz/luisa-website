@@ -17,7 +17,7 @@ export default function Timeline() {
       title: "Virtual Production Coordinator",
       company: "ScanlineVFX (Netflix) 🇨🇦",
       period: "Dec 2021 - Mar 2022",
-      description: "Helped incorporate Virtual Production into the new Scanline VFX pipeline after Netflix acquisition. Facilitated interdepartmental conversations and strategized solutions for evolving technology."
+      description: "Helped incorporate Virtual Production into the new Scanline VFX pipeline after the Netflix acquisition. Facilitated interdepartmental conversations and strategized solutions for evolving technology."
     },
     {
       title: "Capture Production Assistant/ Assistant Producer",
@@ -32,19 +32,19 @@ export default function Timeline() {
       title: "Intern",
       company: "Disney+ 🇨🇦",
       period: "June 2019",
-      description: "Had the opportunity to intern for a Disney+ film right after university. This was one of their first projects going straight to Disney+. I could bounce around many departments and learn first hand what a day on set looks like."
+      description: "Had the opportunity to intern for a Disney+ film right after university. This was one of their first projects, going straight to Disney+. I could bounce around many departments and learn firsthand what a day on set looks like."
     },
     {
       title: "Work Experience",
       company: "AG Films 🇵🇹",
       period: "June 2018",
-      description: "Learned first hand all about running a production company in Lisbon as we organized and filmed a car commercial."
+      description: "Learned firsthand all about running a production company in Lisbon as we organized and filmed a car commercial."
     },
     {
       title: "Work Experience",
       company: "ZigZag Productions 🇬🇧",
       period: "January 2018",
-      description: "My first experience in a production company. I transcribed raw footage from different languages and run small errands throughout my stay. I was then refered to another production company (Faction Films) where I interned for 2 more weeks in the Spring."
+      description: "My first experience in a production company. I transcribed raw footage from different languages and ran small errands throughout my stay. I was then referred to another production company (Faction Films) where I interned for 2 more weeks in the Spring."
     }
   ];
 
