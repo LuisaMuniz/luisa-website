@@ -7,13 +7,13 @@ export default function Experience() {
     {
       icon: ProjectorIcon,
       title: "Project Management",
-      description: "Expert in workflow management, scheduling, and resource allocation. I can create a plan and make sure its executed.",
+      description: "Expert in workflow management, scheduling, and resource allocation. I can create a plan and make sure it's executed.",
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: Users,
       title: "Team Leadership",
-      description: "There is no task too small. I am happy to take the lead in projects making sure my teammates feel supported.",
+      description: "There is no task too small. I am happy to take the lead in projects, making sure my teammates feel supported.",
       color: "from-teal-500 to-green-500"
     },
     {
