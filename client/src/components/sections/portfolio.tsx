@@ -10,14 +10,14 @@ export default function Projects() {
   const projects = [
     {
       title: "Moana 2 (2024)",
-      description: "Coordinated the character department from start to finish. Was able to join almost all departments to help complete the movie. This experience gave me indepth understanding of the animation pipeline.",
+      description: "Coordinated the character department from start to finish. Was able to join almost all departments to help complete the movie. This experience gave me an in-depth understanding of the animation pipeline.",
       image: moana2Image,
       tags: ["Disney Animation", "Production Management", "Feature Film"],
       link: "https://www.imdb.com/title/tt13622970/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_moana%25202"
     },
     {
       title: "Unannounced Disney Project (2025)",
-      description: "Had the opportunity to jump into a very special short. This was a smaller scaled project so I had the opportunity to wear many hats. It was incredibly rewarding to learn so much in such a short amount of time.",
+      description: "Had the opportunity to jump into a very special short. This was a smaller-scale project, so I had the opportunity to wear many hats. It was incredibly rewarding to learn so much in such a short amount of time.",
       image: disneyProjectGraphic,
       tags: ["Disney Animation", "Production Management", "Short Film"]
     },
@@ -29,7 +29,7 @@ export default function Projects() {
     },
     {
       title: "Mr. James is Dead (2020)",
-      description: "Produced an independent short film in 8 weeks with all the challenging elements typically avoided in scripts: fake firearms, action choreography, and kids' schedules. An incredible rushed challenge that provided extensive learning opportunities.",
+      description: "Produced an independent short film in 8 weeks with all the challenging elements typically avoided in scripts: fake firearms, action choreography, and kids' schedules. An incredibly rushed challenge that provided extensive learning opportunities.",
       image: mrJamesImage,
       tags: ["Independent Film", "Producer", "Short Film"]
     },
