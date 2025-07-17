@@ -14,7 +14,7 @@ This is a modern, responsive CV/portfolio website built with React and Express. 
 - Improved culinary adventures image sizing and formatting in interests section
 - Updated social media meta tags for proper link sharing (Luisa Muniz, luisamunizsm.com)
 - Created "LM" favicon with equal letter sizing for browser tabs
-- Grammar and text corrections in About Me, Professional Timeline, Projects, and Experience & Skills sections for professional presentation
+- Grammar and text corrections in About Me, Professional Timeline, Projects, Experience & Skills, and Personal Interests sections for professional presentation
 
 ## User Preferences
 

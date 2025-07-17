@@ -156,7 +156,7 @@ export default function Interests() {
               <h3 className="text-3xl font-bold mb-4">Why My Hobbies Matter</h3>
               <p className="text-lg opacity-90 mb-6">
                 My diverse interests aren't just hobbies—they're sources of inspiration that inform my professional approach. 
-                From the precision of spreadsheet, to the creativity of cooking and my passion of exploring the world, they all contributes to my 
+                From the precision of spreadsheets to the creativity of cooking and my passion for exploring the world, they all contribute to my 
                 ability to think logically and bring fresh global perspectives to any workplace. And I love playing UNO!
               </p>
               <div className="flex flex-wrap gap-4">
@@ -165,9 +165,6 @@ export default function Interests() {
                 </Badge>
                 <Badge variant="secondary" className="bg-white bg-opacity-20 text-white">
                   Global Perspective
-                </Badge>
-                <Badge variant="secondary" className="bg-white bg-opacity-20 text-white">
-                  Attention to Detail
                 </Badge>
               </div>
             </div>
