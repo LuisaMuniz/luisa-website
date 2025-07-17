@@ -15,7 +15,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Send email notification to Luisa
       const emailSent = await sendEmail({
         to: 'lmunizsimas@gmail.com',
-        from: 'noreply@luisamuniz.com', // This should be a verified sender email
+        from: 'lmunizsimas@gmail.com', // Using your verified sender email
         subject: `New Contact Form Message: ${validatedData.subject}`,
         text: `
 New message from your website contact form:
