@@ -50,12 +50,12 @@ export default function Contact() {
   const whyChiefOfStaff = [
     "I love strategic thinking with no time wasted",
     "Always communicating clear expectations",
-    "I will roll up my sleeves and do whatever is needed to move foward",
+    "I will roll up my sleeves and do whatever is needed to move forward",
     "I can build a solid plan and execute it",
     "Creating company culture is a priority, I can organize team building events",
-    "There is no project too big or too small for me, I understand the nuances of a start up and wont mind the chaos",
+    "There is no project too big or too small for me, I understand the nuances of a start up and won't mind the chaos",
     "I can manage multiple projects at once and prioritize effectively",
-  "My teammates can relay on me to be there for them",
+    "My teammates can rely on me to be there for them"
   ];
 
   return (
