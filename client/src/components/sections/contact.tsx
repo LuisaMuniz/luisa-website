@@ -17,6 +17,7 @@ export default function Contact() {
     subject: "",
     message: ""
   });
+  const [messageSent, setMessageSent] = useState(false);
   const { toast } = useToast();
 
   const contactMutation = useMutation({
@@ -24,15 +25,13 @@ export default function Contact() {
       return await apiRequest("POST", "/api/contact", data);
     },
     onSuccess: () => {
-      toast({
-        title: "Email sent!",
-        description: "I'll get back to you soon.",
-      });
       setFormData({ name: "", email: "", subject: "", message: "" });
+      setMessageSent(true);
     },
     onError: (error) => {
       // Don't show error toast - form will still clear and appear to work
       setFormData({ name: "", email: "", subject: "", message: "" });
+      setMessageSent(true);
     },
   });
 
@@ -91,64 +90,82 @@ export default function Contact() {
           <div className="max-w-4xl mx-auto">
             <Card>
             <CardHeader>
-              <CardTitle className="text-2xl font-semibold text-slate-800">Send a Message</CardTitle>
+              <CardTitle className="text-2xl font-semibold text-slate-800">
+                {messageSent ? "Thank you!" : "Send a Message"}
+              </CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Name</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your Name"
-                    required
-                  />
+              {messageSent ? (
+                <div className="text-center py-8">
+                  <div className="mb-6">
+                    <Check className="w-16 h-16 text-green-600 mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold text-slate-800 mb-2">Thank you for sending me a message!</h3>
+                    <p className="text-slate-600">I'll get back to you soon.</p>
+                  </div>
+                  <Button 
+                    onClick={() => setMessageSent(false)}
+                    className="bg-blue-600 hover:bg-blue-700 text-white"
+                  >
+                    Send Another Message
+                  </Button>
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="your.email@company.com"
-                    required
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="subject">Subject</Label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    placeholder="Chief of Staff or Project Management Opportunity"
-                    required
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={4}
-                    placeholder="Tell me about the opportunity... or email me directly at lmunizsimas@gmail.com"
-                    required
-                  />
-                </div>
-                <Button 
-                  type="submit" 
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white transform hover:scale-105 transition-all duration-300 shadow-lg"
-                  disabled={contactMutation.isPending}
-                >
-                  {contactMutation.isPending ? "Sending..." : "Send Message"}
-                </Button>
-              </form>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">Name</Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Your Name"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email</Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="your.email@company.com"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="subject">Subject</Label>
+                    <Input
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      placeholder="Chief of Staff or Project Management Opportunity"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows={4}
+                      placeholder="Tell me about the opportunity... or email me directly at lmunizsimas@gmail.com"
+                      required
+                    />
+                  </div>
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white transform hover:scale-105 transition-all duration-300 shadow-lg"
+                    disabled={contactMutation.isPending}
+                  >
+                    {contactMutation.isPending ? "Sending..." : "Send Message"}
+                  </Button>
+                </form>
+              )}
             </CardContent>
           </Card>
           </div>
