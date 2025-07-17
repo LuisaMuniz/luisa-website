@@ -128,7 +128,11 @@ export default function Interests() {
                     <img 
                       src={interest.image} 
                       alt={interest.title}
-                      className="w-full h-32 object-cover rounded-lg mt-4 group-hover:scale-105 transition-transform duration-300"
+                      className={`w-full rounded-lg mt-4 group-hover:scale-105 transition-transform duration-300 ${
+                        interest.title === "Culinary Adventures" 
+                          ? "h-40 object-contain mx-auto" 
+                          : "h-32 object-cover"
+                      }`}
                     />
                   )}
                 </CardContent>
