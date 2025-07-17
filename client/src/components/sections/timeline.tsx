@@ -138,7 +138,7 @@ export default function Timeline() {
             
             {/* Three dots indicator when collapsed */}
             {!showMore && (
-              <div className="absolute left-8 flex flex-col items-center space-y-0.5 -translate-x-0.5" style={{ top: `${lineHeight + 10}px` }}>
+              <div className="absolute left-8 flex flex-col items-center space-y-1 -translate-x-0.5" style={{ top: `${lineHeight + 10}px` }}>
                 <div className="w-1 h-1 bg-blue-400 rounded-full"></div>
                 <div className="w-1 h-1 bg-blue-400 rounded-full"></div>
                 <div className="w-1 h-1 bg-blue-400 rounded-full"></div>
