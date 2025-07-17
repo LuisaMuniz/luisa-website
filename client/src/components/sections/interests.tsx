@@ -129,10 +129,10 @@ export default function Interests() {
                       <img 
                         src={interest.image} 
                         alt={interest.title}
-                        className={`rounded-lg group-hover:scale-105 transition-transform duration-300 ${
+                        className={`w-full rounded-lg group-hover:scale-105 transition-transform duration-300 ${
                           interest.title === "Culinary Adventures" 
-                            ? "w-full h-96 object-contain mx-auto" 
-                            : "w-full h-32 object-cover"
+                            ? "h-96 object-contain" 
+                            : "h-32 object-cover"
                         }`}
                       />
                     </div>
