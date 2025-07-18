@@ -135,7 +135,7 @@ export default function Interests() {
                           />
                         </div>
                       ) : interest.title === "Ice Cream for Lunch" ? (
-                        <div className="w-full h-[28rem] rounded-lg overflow-hidden flex items-start justify-center pt-8">
+                        <div className="w-full h-[28rem] rounded-lg overflow-hidden flex items-start justify-center">
                           <img 
                             src={interest.image} 
                             alt={interest.title}
