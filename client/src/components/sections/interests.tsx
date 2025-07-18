@@ -127,21 +127,18 @@ export default function Interests() {
                   {interest.image && (
                     <div className="w-full mt-4">
                       {interest.title === "Culinary Adventures" ? (
-                        <div className="w-full h-[28rem] rounded-lg overflow-hidden bg-white flex items-center justify-center">
-                          <img 
-                            src={interest.image} 
-                            alt={interest.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
+                        <img 
+                          src={interest.image} 
+                          alt={interest.title}
+                          className="w-full h-[28rem] object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                        />
                       ) : interest.title === "Ice Cream for Lunch" ? (
-                        <div className="w-full h-[28rem] rounded-lg overflow-hidden flex items-start justify-center">
-                          <img 
-                            src={interest.image} 
-                            alt={interest.title}
-                            className="w-full h-48 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
+                        <img 
+                          src={interest.image} 
+                          alt={interest.title}
+                          className="w-full h-48 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                        />
+                      
                       ) : (
                         <img 
                           src={interest.image} 
