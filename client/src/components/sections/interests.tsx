@@ -134,6 +134,14 @@ export default function Interests() {
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
+                      ) : interest.title === "Ice Cream for Lunch" ? (
+                        <div className="w-full h-[28rem] rounded-lg overflow-hidden bg-white flex items-center justify-center">
+                          <img 
+                            src={interest.image} 
+                            alt={interest.title}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
                       ) : (
                         <img 
                           src={interest.image} 
