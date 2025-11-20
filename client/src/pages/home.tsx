@@ -5,6 +5,7 @@ import Education from "@/components/sections/education";
 import Experience from "@/components/sections/experience";
 import Timeline from "@/components/sections/timeline";
 import Writing from "@/components/sections/portfolio";
+import WhatICanDo from "@/components/sections/what-i-can-do";
 import GlobalExperience from "@/components/sections/global-experience";
 import Interests from "@/components/sections/interests";
 import Contact from "@/components/sections/contact";
@@ -22,6 +23,7 @@ export default function Home() {
       <Experience />
       <GlobalExperience />
       <Interests />
+      <WhatICanDo />
       <Contact />
       <Footer />
     </div>

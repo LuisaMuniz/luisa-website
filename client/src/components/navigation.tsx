@@ -9,6 +9,7 @@ const navItems = [
   { href: "#timeline", label: "Professional Timeline", category: "Career" },
   { href: "#writing", label: "Projects", category: "Career" },
   { href: "#experience", label: "Experience & Skills", category: "Career" },
+  { href: "#what-i-can-do", label: "What I can do for you", category: "What I can do for you" },
   { href: "#global-experience", label: "Global Experience and Languages", category: "Interests" },
   { href: "#interests", label: "Personal Interests", category: "Interests" },
   { href: "#contact", label: "Let's Connect", category: "Contact me" },
@@ -21,7 +22,7 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = navItems.map(item => document.querySelector(item.href));
+      const sections = navItems.map(item => document.querySelector(item.href) as HTMLElement | null);
       const scrollPosition = window.scrollY + 100;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -53,7 +54,7 @@ export default function Navigation() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {["About me", "Career", "Interests", "Contact me"].map((category) => (
+            {["About me", "Career", "What I can do for you", "Interests", "Contact me"].map((category) => (
               <div key={category} className="relative group">
                 <button 
                   onClick={() => {
@@ -98,7 +99,7 @@ export default function Navigation() {
               </SheetTrigger>
               <SheetContent side="right">
                 <div className="flex flex-col space-y-2 mt-8">
-                  {["About me", "Career", "Interests", "Contact me"].map((category) => (
+                  {["About me", "Career", "What I can do for you", "Interests", "Contact me"].map((category) => (
                     <div key={category}>
                       <button
                         onClick={() => {
