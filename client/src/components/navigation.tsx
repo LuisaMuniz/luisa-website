@@ -54,39 +54,46 @@ export default function Navigation() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {["About me", "Career", "What I can do for you", "Interests", "Contact me"].map((category) => (
-              <div key={category} className="relative group">
-                <button 
-                  onClick={() => {
-                    // Find the first section in this category and scroll to it
-                    const firstSection = navItems.find(item => item.category === category);
-                    if (firstSection) {
-                      scrollToSection(firstSection.href);
-                    }
-                  }}
-                  className="text-slate-600 hover:text-blue-600 transition-colors font-medium"
-                >
-                  {category}
-                </button>
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <div className="py-2">
-                    {navItems.filter(item => item.category === category).map((item) => (
-                      <button
-                        key={item.href}
-                        onClick={() => scrollToSection(item.href)}
-                        className={`block w-full text-left px-4 py-2 transition-colors ${
-                          activeSection === item.href.substring(1)
-                            ? "text-blue-600 bg-blue-50"
-                            : "text-slate-600 hover:text-blue-600 hover:bg-slate-50"
-                        }`}
-                      >
-                        {item.label}
-                      </button>
-                    ))}
-                  </div>
+            {["About me", "Career", "What I can do for you", "Interests", "Contact me"].map((category) => {
+              const categoryItems = navItems.filter(item => item.category === category);
+              const hasDropdown = category !== "What I can do for you";
+              
+              return (
+                <div key={category} className={hasDropdown ? "relative group" : ""}>
+                  <button 
+                    onClick={() => {
+                      // Find the first section in this category and scroll to it
+                      const firstSection = navItems.find(item => item.category === category);
+                      if (firstSection) {
+                        scrollToSection(firstSection.href);
+                      }
+                    }}
+                    className="text-slate-600 hover:text-blue-600 transition-colors font-medium"
+                  >
+                    {category}
+                  </button>
+                  {hasDropdown && (
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                      <div className="py-2">
+                        {categoryItems.map((item) => (
+                          <button
+                            key={item.href}
+                            onClick={() => scrollToSection(item.href)}
+                            className={`block w-full text-left px-4 py-2 transition-colors ${
+                              activeSection === item.href.substring(1)
+                                ? "text-blue-600 bg-blue-50"
+                                : "text-slate-600 hover:text-blue-600 hover:bg-slate-50"
+                            }`}
+                          >
+                            {item.label}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Mobile Navigation */}
@@ -99,39 +106,52 @@ export default function Navigation() {
               </SheetTrigger>
               <SheetContent side="right">
                 <div className="flex flex-col space-y-2 mt-8">
-                  {["About me", "Career", "What I can do for you", "Interests", "Contact me"].map((category) => (
-                    <div key={category}>
-                      <button
-                        onClick={() => {
-                          if (expandedCategory === category) {
-                            setExpandedCategory(null);
-                          } else {
-                            setExpandedCategory(category);
-                          }
-                        }}
-                        className="w-full text-left px-4 py-3 text-lg font-semibold text-slate-700 hover:text-blue-600 transition-colors border-b border-slate-200"
-                      >
-                        {category}
-                      </button>
-                      {expandedCategory === category && (
-                        <div className="space-y-1 ml-4 mt-2 mb-4">
-                          {navItems.filter(item => item.category === category).map((item) => (
-                            <button
-                              key={item.href}
-                              onClick={() => scrollToSection(item.href)}
-                              className={`block w-full text-left px-4 py-2 transition-colors ${
-                                activeSection === item.href.substring(1)
-                                  ? "text-blue-600 bg-blue-50"
-                                  : "text-slate-600 hover:text-blue-600 hover:bg-slate-50"
-                              }`}
-                            >
-                              {item.label}
-                            </button>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ))}
+                  {["About me", "Career", "What I can do for you", "Interests", "Contact me"].map((category) => {
+                    const hasDropdown = category !== "What I can do for you";
+                    const categoryItems = navItems.filter(item => item.category === category);
+                    
+                    return (
+                      <div key={category}>
+                        <button
+                          onClick={() => {
+                            if (hasDropdown) {
+                              if (expandedCategory === category) {
+                                setExpandedCategory(null);
+                              } else {
+                                setExpandedCategory(category);
+                              }
+                            } else {
+                              // Scroll directly for "What I can do for you"
+                              const firstSection = navItems.find(item => item.category === category);
+                              if (firstSection) {
+                                scrollToSection(firstSection.href);
+                              }
+                            }
+                          }}
+                          className="w-full text-left px-4 py-3 text-lg font-semibold text-slate-700 hover:text-blue-600 transition-colors border-b border-slate-200"
+                        >
+                          {category}
+                        </button>
+                        {hasDropdown && expandedCategory === category && (
+                          <div className="space-y-1 ml-4 mt-2 mb-4">
+                            {categoryItems.map((item) => (
+                              <button
+                                key={item.href}
+                                onClick={() => scrollToSection(item.href)}
+                                className={`block w-full text-left px-4 py-2 transition-colors ${
+                                  activeSection === item.href.substring(1)
+                                    ? "text-blue-600 bg-blue-50"
+                                    : "text-slate-600 hover:text-blue-600 hover:bg-slate-50"
+                                }`}
+                              >
+                                {item.label}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               </SheetContent>
             </Sheet>
