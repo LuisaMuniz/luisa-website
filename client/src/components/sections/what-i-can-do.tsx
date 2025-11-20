@@ -5,9 +5,12 @@ export default function WhatICanDo() {
   return (
     <section id="what-i-can-do" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center mb-16 text-slate-800">
-          What I can do for you
-        </h2>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">
+            What I can do for you
+          </h2>
+          <p className="text-xl text-slate-600">20 ways I can help make your work life easier</p>
+        </div>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <div className="flex justify-center">
