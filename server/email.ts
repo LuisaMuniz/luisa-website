@@ -1,4 +1,4 @@
-import * as brevo from '@getbrevo/brevo';
+import { MailerSend, EmailParams as MSEmailParams, Sender, Recipient } from "mailersend";
 
 interface EmailParams {
   to: string;
@@ -11,46 +11,48 @@ interface EmailParams {
 
 export async function sendEmail(params: EmailParams): Promise<boolean> {
   try {
-    const apiKey = process.env.BREVO_API_KEY;
+    const apiKey = process.env.MAILERSEND_API_KEY;
     
     if (!apiKey) {
-      console.log('Brevo API key not found. Email would be sent to:', params.to);
+      console.log('MailerSend API key not found. Email would be sent to:', params.to);
       return false;
     }
 
-    // Initialize Brevo API client
-    const apiInstance = new brevo.TransactionalEmailsApi();
-    apiInstance.setApiKey(brevo.TransactionalEmailsApiApiKeys.apiKey, apiKey);
+    // Initialize MailerSend client
+    const mailerSend = new MailerSend({
+      apiKey: apiKey,
+    });
     
-    // Prepare email data
-    const sendSmtpEmail = new brevo.SendSmtpEmail();
-    sendSmtpEmail.to = [{ email: params.to }];
-    sendSmtpEmail.sender = { 
-      email: params.from,
-      name: 'CV Website Contact Form'
-    };
-    sendSmtpEmail.subject = params.subject;
+    // Prepare recipients and sender
+    const recipients = [new Recipient(params.to)];
+    const sentFrom = new Sender(params.from, "CV Website Contact Form");
     
-    if (params.text) {
-      sendSmtpEmail.textContent = params.text;
-    }
+    // Create email parameters
+    const emailParams = new MSEmailParams()
+      .setFrom(sentFrom)
+      .setTo(recipients)
+      .setSubject(params.subject);
     
     if (params.html) {
-      sendSmtpEmail.htmlContent = params.html;
+      emailParams.setHtml(params.html);
+    }
+    
+    if (params.text) {
+      emailParams.setText(params.text);
     }
     
     if (params.replyTo) {
-      sendSmtpEmail.replyTo = { email: params.replyTo };
+      emailParams.setReplyTo(new Recipient(params.replyTo));
     }
     
-    // Send email via Brevo
-    const result = await apiInstance.sendTransacEmail(sendSmtpEmail);
+    // Send email via MailerSend
+    const result = await mailerSend.email.send(emailParams);
     
-    console.log('Email sent successfully via Brevo to:', params.to);
-    console.log('Brevo response:', result);
+    console.log('Email sent successfully via MailerSend to:', params.to);
+    console.log('MailerSend response:', result);
     return true;
   } catch (error) {
-    console.error('Brevo email error:', error);
+    console.error('MailerSend email error:', error);
     
     // More detailed error logging
     if (error && typeof error === 'object') {
