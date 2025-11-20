@@ -1,35 +1,21 @@
 import { contactMessages, type ContactMessage, type InsertContactMessage } from "@shared/schema";
+import { db } from "./db";
+import { desc } from "drizzle-orm";
 
 export interface IStorage {
   createContactMessage(message: InsertContactMessage): Promise<ContactMessage>;
   getContactMessages(): Promise<ContactMessage[]>;
 }
 
-export class MemStorage implements IStorage {
-  private messages: Map<number, ContactMessage>;
-  private currentId: number;
-
-  constructor() {
-    this.messages = new Map();
-    this.currentId = 1;
-  }
-
+export class DbStorage implements IStorage {
   async createContactMessage(insertMessage: InsertContactMessage): Promise<ContactMessage> {
-    const id = this.currentId++;
-    const message: ContactMessage = {
-      ...insertMessage,
-      id,
-      createdAt: new Date(),
-    };
-    this.messages.set(id, message);
+    const [message] = await db.insert(contactMessages).values(insertMessage).returning();
     return message;
   }
 
   async getContactMessages(): Promise<ContactMessage[]> {
-    return Array.from(this.messages.values()).sort((a, b) => 
-      b.createdAt.getTime() - a.createdAt.getTime()
-    );
+    return await db.select().from(contactMessages).orderBy(desc(contactMessages.createdAt));
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DbStorage();
