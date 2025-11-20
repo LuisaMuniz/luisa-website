@@ -4,7 +4,14 @@
 
 This is a modern, responsive CV/portfolio website built with React and Express. The application features a single-page design showcasing a professional's background, experience, and contact information. It includes a contact form with backend storage capabilities and is styled with Tailwind CSS using shadcn/ui components.
 
-## Recent Changes (July 17, 2025)
+## Recent Changes (November 20, 2025)
+- **Database Migration**: Migrated contact form storage from in-memory to PostgreSQL for permanent message persistence
+- Added "What I can do for you" section with infographic images showcasing 20 skills/services
+- Updated navigation to include "What I can do for you" tab (direct link, no dropdown)
+- Fixed LSP errors in navigation component with proper TypeScript types
+- Improved section title styling to match site theme (blue headings with descriptive subtitles)
+
+## Previous Changes (July 17, 2025)
 - Fixed SendGrid email functionality with proper API key configuration and dotenv loading
 - Added comprehensive error logging for email delivery troubleshooting
 - Implemented admin page at `/admin/messages` for viewing contact form submissions
@@ -32,9 +39,10 @@ Design preferences: Clean, professional design with solid colors instead of grad
 
 ### Backend Architecture
 - **Framework**: Express.js with TypeScript
-- **Database**: PostgreSQL with Drizzle ORM (currently using in-memory storage as fallback)
+- **Database**: PostgreSQL (Neon) with Drizzle ORM for permanent data storage
 - **Session Management**: Configured for PostgreSQL sessions
 - **API**: RESTful endpoints for contact form functionality
+- **Email**: SendGrid integration for contact form notifications (requires SENDGRID_API_KEY)
 
 ## Key Components
 
@@ -53,9 +61,11 @@ Design preferences: Clean, professional design with solid colors instead of grad
 
 ### Backend Components
 1. **API Routes**: Contact form submission and retrieval endpoints
-2. **Storage Layer**: Abstracted storage interface with in-memory implementation
-3. **Middleware**: Request logging and error handling
-4. **Database Schema**: Contact messages table with Drizzle ORM
+2. **Storage Layer**: PostgreSQL database storage via Drizzle ORM (DbStorage class)
+3. **Database Connection**: Neon serverless PostgreSQL with WebSocket support
+4. **Middleware**: Request logging and error handling
+5. **Database Schema**: Contact messages table with Drizzle ORM
+6. **Admin Interface**: `/admin/messages` page for viewing all contact submissions
 
 ## Data Flow
 
@@ -68,9 +78,10 @@ Design preferences: Clean, professional design with solid colors instead of grad
 6. Toast notification displayed to user
 
 ### Data Retrieval
-1. Admin can access all contact messages via GET `/api/contact`
-2. Messages are sorted by creation date (newest first)
-3. In-memory storage provides fallback when database is unavailable
+1. Admin can access all contact messages via GET `/api/contact` or `/admin/messages` page
+2. Messages are permanently stored in PostgreSQL database
+3. Messages are sorted by creation date (newest first)
+4. SendGrid sends email notifications to lmunizsimas@gmail.com (requires SENDGRID_API_KEY)
 
 ## External Dependencies
 
@@ -95,7 +106,7 @@ Design preferences: Clean, professional design with solid colors instead of grad
 ### Development Environment
 - **Frontend**: Vite dev server with HMR
 - **Backend**: tsx for TypeScript execution
-- **Database**: PostgreSQL (configured but falls back to in-memory)
+- **Database**: PostgreSQL (Neon serverless) - fully operational and storing messages
 - **Environment**: Replit-optimized with cartographer plugin
 
 ### Production Build
@@ -106,9 +117,11 @@ Design preferences: Clean, professional design with solid colors instead of grad
 
 ### Configuration Notes
 - Database schema located in `shared/schema.ts`
-- Drizzle migrations output to `./migrations` directory
-- Environment variables required: `DATABASE_URL` for PostgreSQL
-- Fallback to in-memory storage when database unavailable
+- Database connection configured in `server/db.ts` using Neon serverless
+- Storage implementation in `server/storage.ts` (DbStorage class)
+- Environment variables required: 
+  - `DATABASE_URL` for PostgreSQL (automatically set by Replit)
+  - `SENDGRID_API_KEY` for email notifications (optional but recommended)
 - Replit-specific configurations for development environment
 
 ### Build Commands
@@ -117,4 +130,4 @@ Design preferences: Clean, professional design with solid colors instead of grad
 - `npm run start`: Production server
 - `npm run db:push`: Push database schema changes
 
-The application is designed to be resilient with graceful fallbacks and can operate with or without a database connection, making it suitable for various deployment scenarios.
+The application uses PostgreSQL for permanent data storage. Contact form submissions are stored in the database and can be viewed at `/admin/messages`. Email notifications via SendGrid are optional and require the SENDGRID_API_KEY environment variable.
