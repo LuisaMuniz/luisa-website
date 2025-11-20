@@ -128,11 +128,11 @@ This message was sent from your CV website contact form.
       console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
 
       if (emailSent) {
-        console.log('✅ Email notification sent successfully to Gmail');
+        console.log('✅ Email notification sent successfully via Brevo to Gmail');
         console.log('⚠️  If you\'re not receiving emails, check:');
         console.log('   1. Your spam/junk folder');
         console.log('   2. Gmail\'s Promotions tab');
-        console.log('   3. SendGrid account verification status');
+        console.log('   3. Brevo account verification status');
       } else {
         console.log('❌ Email notification failed - message stored in database');
       }

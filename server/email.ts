@@ -1,4 +1,4 @@
-import sgMail from '@sendgrid/mail';
+import * as brevo from '@getbrevo/brevo';
 
 interface EmailParams {
   to: string;
@@ -11,52 +11,46 @@ interface EmailParams {
 
 export async function sendEmail(params: EmailParams): Promise<boolean> {
   try {
-    const apiKey = process.env.SENDGRID_API_KEY;
+    const apiKey = process.env.BREVO_API_KEY;
     
     if (!apiKey) {
-      console.log('SendGrid API key not found. Email would be sent to:', params.to);
+      console.log('Brevo API key not found. Email would be sent to:', params.to);
       return false;
     }
 
-    sgMail.setApiKey(apiKey);
+    // Initialize Brevo API client
+    const apiInstance = new brevo.TransactionalEmailsApi();
+    apiInstance.setApiKey(brevo.TransactionalEmailsApiApiKeys.apiKey, apiKey);
     
-    const mailOptions: any = {
-      to: params.to,
-      from: {
-        email: params.from,
-        name: 'CV Website Contact Form'
-      },
-      subject: params.subject,
-      text: params.text,
-      html: params.html,
-      // Add headers to improve delivery
-      headers: {
-        'X-Priority': '1',
-        'X-MSMail-Priority': 'High',
-        'Importance': 'high'
-      },
-      // Add tracking settings
-      trackingSettings: {
-        clickTracking: {
-          enable: false
-        },
-        openTracking: {
-          enable: false
-        }
-      }
+    // Prepare email data
+    const sendSmtpEmail = new brevo.SendSmtpEmail();
+    sendSmtpEmail.to = [{ email: params.to }];
+    sendSmtpEmail.sender = { 
+      email: params.from,
+      name: 'CV Website Contact Form'
     };
+    sendSmtpEmail.subject = params.subject;
     
-    if (params.replyTo) {
-      mailOptions.replyTo = params.replyTo;
+    if (params.text) {
+      sendSmtpEmail.textContent = params.text;
     }
     
-    const result = await sgMail.send(mailOptions);
+    if (params.html) {
+      sendSmtpEmail.htmlContent = params.html;
+    }
     
-    console.log('Email sent successfully to:', params.to);
-    console.log('SendGrid response:', result[0]?.statusCode, result[0]?.headers);
+    if (params.replyTo) {
+      sendSmtpEmail.replyTo = { email: params.replyTo };
+    }
+    
+    // Send email via Brevo
+    const result = await apiInstance.sendTransacEmail(sendSmtpEmail);
+    
+    console.log('Email sent successfully via Brevo to:', params.to);
+    console.log('Brevo response:', result);
     return true;
   } catch (error) {
-    console.error('SendGrid email error:', error);
+    console.error('Brevo email error:', error);
     
     // More detailed error logging
     if (error && typeof error === 'object') {
